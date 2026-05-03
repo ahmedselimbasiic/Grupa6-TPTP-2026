@@ -4,8 +4,10 @@
 Stranica za pomoc studentima prve godine fakulteta elektrotehnike
 
 ## Članovi grupe
-1.Ahmed Selimbasic @ahmedselimbasiic | CSS + dizajn \\
-2.Aida Halilcevic | @aidahalilcevic | HTML + struktura
+1.Ahmed Selimbasic @ahmedselimbasiic | CSS + dizajn  
+
+2.Aida Halilcevic | @aidahalilcevic | HTML + struktura  
+
 3.Ahmed Mahmutovic | @realahmox | Javascript + logika
 
 ## Opis projekta
