@@ -4,9 +4,9 @@
 Stranica za pomoc studentima prve godine fakulteta elektrotehnike
 
 ## Članovi grupe
-| Ahmed Selimbasic | @ahmedselimbasiic | Početna stranica, navigacija |
-| Aida Halilcevic | @aidahalilcevic | Sadržaj stranica |
-| Ahmed Mahmutovic | @username3 | Kontakt forma, stilizacija |
+1.Ahmed Selimbasic @ahmedselimbasiic | CSS + dizajn
+2.Aida Halilcevic | @aidahalilcevic | HTML + struktura
+3.Ahmed Mahmutovic | @realahmox | Javascript + logika
 
 ## Opis projekta
-Kratki opis šta projekat radi...
+Ovaj projekat predstavlja interaktivnu web platformu dizajniranu s ciljem da olakša akademski početak studentima prve godine Fakulteta elektrotehnike. Platforma centralizuje ključne informacije na jednom mjestu – od pregleda predmeta i dostupne literature, do praktičnih savjeta za učenje, rasporeda i snalaženja u studentskim obavezama.
