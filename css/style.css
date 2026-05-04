@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap");
+:root {
+  --primarycolor: #036d59;
+  --secondarycolor: #50d1ba;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.logo-image,
+.button {
+  width: 250px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  cursor: pointer;
+}
+header {
+  padding: 10px 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: white;
+  font-family: "Archivo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+nav {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+nav a {
+  text-decoration: none;
+  color: #15110b;
+  font-size: 18px;
+  transition: 0.1s ease-in-out;
+}
+nav a:hover {
+  color: var(--primarycolor);
+}
+nav a.active {
+  color: var(--primarycolor);
+  border-bottom: 2px solid --primarycolor;
+}
+.gitrepo {
+  width: 120px;
+  height: 40px;
+  background-color: white;
+  border-radius: 25px;
+  border: 2px solid rgba(129, 125, 120, 0.6);
+  color: var(--primarycolor);
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+.gitrepo:hover {
+  background-color: var(--primarycolor);
+  color: white;
+}
+.hero-section {
+  margin: 15px;
+  height: 70vh;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url(../slike/FET-scaled.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+.hero-section .description {
+  width: 40vw;
+  text-align: center;
+  padding-bottom: 30px;
+}
+.hero-section .description h1 {
+  font-size: 5rem;
+  color: aliceblue;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.55);
+  margin-bottom: 0px;
+  line-height: 0.9;
+}
+.hero-section .description p {
+  color: white;
+  font-size: 1.1rem;
+  font-family: "Lato", sans-serif;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.55);
+  margin-top: 15px;
+}
+.span {
+  font-family: "Playfair", serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 6rem;
+}
+.service {
+  background-color: var(--primarycolor);
+  height: 65vh;
+  padding: 20px 10px;
+}
+.service h1 {
+  text-align: center;
+  color: white;
+  font-size: 3.4rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.55);
+}
+.service span {
+  color: var(--secondarycolor);
+  font-family: "Playfair", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+.service .service-container {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 75px;
+}
+.service .service-container .card {
+  width: 330px;
+  height: 330px;
+  border-radius: 30px;
+  background-color: rgba(80, 209, 186, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  position: relative;
+  padding: 30px 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+.service .service-container .card h3 {
+  font-size: 24px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.55);
+}
+.service .service-container .card p {
+  font-family: "Archivo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.55);
+}
+.service .service-container .card .icon {
+  height: 100px;
+  width: 100px;
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+.service .service-container .card .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.service .service-container .card .info a {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.service .service-container .card .info button {
+  width: 100px;
+  height: 35px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+.servicebutton {
+  font-size: 14px;
+  color: var(--primarycolor);
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+.servicebutton:hover {
+  background-color: var(--primarycolor);
+  color: white;
+}
+.service .service-container .card1 .icon {
+  background-image: url(../slike/1.png);
+}
+.service .service-container .card2 .icon {
+  background-image: url(../slike/2.png);
+}
+.service .service-container .card3 .icon {
+  background-image: url(../slike/3.png);
+}
