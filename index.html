@@ -18,20 +18,19 @@
           alt="logo"
         />
       </div>
-      <nav>
+      <nav id="menu">
         <a href="index.html" class="active">Početna</a>
         <a href="materijali.html">Materijali</a>
         <a href="savjeti">Savjeti</a>
         <a href="kontakt.html">Kontakt</a>
-      </nav>
-      <div class="button">
         <a href="#"><button class="gitrepo">Git</button></a>
-      </div>
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
+      </nav>
+      <div class="hamburger" onclick="toggleMenu()"> <!--Dodana funckionalnost onclick-->
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+    
+  </div>
     </header>
     <div class="hero-section">
       <div class="description">
@@ -75,5 +74,6 @@
         </div>
       </div>
     </div>
+    <script src="javascript/main.js" defer></script>
   </body>
 </html>
