@@ -1,18 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap");
+
 :root {
   --primarycolor: #036d59;
   --secondarycolor: #50d1ba;
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Dodano: Sprečava vodoravno bježanje stranice dok je meni sakriven */
+body {
+  overflow-x: hidden;
+}
+
 .logoimg {
   display: none;
 }
+
 .logo-image,
 .button {
   width: 250px;
@@ -21,12 +30,14 @@
   justify-content: center;
   align-items: center;
 }
+
 .logo-image img {
   max-width: 100%;
   height: auto;
   display: block;
   cursor: pointer;
 }
+
 header {
   padding: 10px 100px;
   display: flex;
@@ -41,26 +52,35 @@ header {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  /* Dodano: Da header bude uvijek iznad svega */
+  position: sticky;
+  top: 0;
+  z-index: 2000;
 }
+
 nav {
   display: flex;
   gap: 20px;
   justify-content: center;
   align-items: center;
 }
+
 nav a {
   text-decoration: none;
   color: #15110b;
   font-size: 18px;
   transition: 0.1s ease-in-out;
 }
+
 nav a:hover {
   color: var(--primarycolor);
 }
+
 nav a.active {
   color: var(--primarycolor);
   border-bottom: 2px solid var(--primarycolor);
 }
+
 .gitrepo {
   width: 120px;
   height: 40px;
@@ -75,10 +95,12 @@ nav a.active {
   transition: 0.2s ease-in-out;
   cursor: pointer;
 }
+
 .gitrepo:hover {
   background-color: var(--primarycolor);
   color: white;
 }
+
 .hamburger {
   display: none;
   cursor: pointer;
@@ -87,7 +109,10 @@ nav a.active {
   align-items: center;
   gap: 5px;
   padding: 10px;
+  /* Dodano: Da gumb ostane vidljiv iznad menija */
+  z-index: 1100; 
 }
+
 .bar {
   display: block;
   width: 25px;
@@ -96,6 +121,7 @@ nav a.active {
   border-radius: 3px;
   transition: 0.3s;
 }
+
 @media (max-width: 1050px) {
   .logo-image {
     display: none;
@@ -111,21 +137,64 @@ nav a.active {
     height: auto;
   }
 }
+
 @media (max-width: 1200px) {
-  nav,
+  /* MODIFIKOVANO: Umjesto display:none, pretvaramo nav u skriveni panel */
+  nav {
+    display: flex; 
+    position: fixed;
+    right: -100%; /* Sakriven desno */
+    top: 0;
+    width: 280px; 
+    height: 100vh;
+    background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transition: 0.4s ease-in-out;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    z-index: 1050;
+  }
+
+  .mobile-git {
+    display: block; /* Prikazuje Git dugme u bočnom meniju */
+  }
+
+  /* ANIMACIJA U X */
+  .hamburger.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* Dodano: Klasa koju JS dodaje na klik */
+  nav.active {
+    right: 0;
+  }
+
   .button {
     display: none;
   }
+
   .hamburger {
     display: flex;
+    margin-left: auto; /* Gura sendvič skroz desno */
   }
+
   .hamburger:hover .bar {
     background-color: var(--secondarycolor);
   }
+
   header {
     padding: 10px 40px;
   }
 }
+
 /*Hero sekcija*/
 .hero-section {
   margin: 15px;
@@ -348,4 +417,26 @@ nav a.active {
     width: 130px;
     height: 40px;
   }
+}
+
+/* Stilovi za dugme u bočnom meniju */
+.menu-button {
+  width: 120px;
+  height: 40px;
+  background-color: var(--primarycolor);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  margin-top: 10px;
+}
+
+.menu-button:hover {
+  background-color: var(--secondarycolor);
+  color: #15110b;
 }
