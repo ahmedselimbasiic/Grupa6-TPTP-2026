@@ -10,6 +10,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+.logoimg {
+  display: none;
+}
 .logo-image,
 .button {
   width: 250px;
@@ -56,7 +59,7 @@ nav a:hover {
 }
 nav a.active {
   color: var(--primarycolor);
-  border-bottom: 2px solid --primarycolor;
+  border-bottom: 2px solid var(--primarycolor);
 }
 .gitrepo {
   width: 120px;
@@ -76,6 +79,54 @@ nav a.active {
   background-color: var(--primarycolor);
   color: white;
 }
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--primarycolor);
+  border-radius: 3px;
+  transition: 0.3s;
+}
+@media (max-width: 1050px) {
+  .logo-image {
+    display: none;
+  }
+  .logoimg {
+    display: block;
+    width: 100px;
+    height: 70px;
+    cursor: pointer;
+  }
+  .logoimg img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 1200px) {
+  nav,
+  .button {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .hamburger:hover .bar {
+    background-color: var(--secondarycolor);
+  }
+  header {
+    padding: 10px 40px;
+  }
+}
+/*Hero sekcija*/
 .hero-section {
   margin: 15px;
   height: 70vh;
@@ -92,12 +143,12 @@ nav a.active {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 .hero-section .description {
-  width: 40vw;
+  width: 60vw;
   text-align: center;
   padding-bottom: 30px;
 }
 .hero-section .description h1 {
-  font-size: 5rem;
+  font-size: 72px;
   color: aliceblue;
   font-family: "Lato", sans-serif;
   font-weight: 700;
@@ -117,11 +168,33 @@ nav a.active {
   font-family: "Playfair", serif;
   font-weight: 400;
   font-style: italic;
-  font-size: 6rem;
+  font-size: 90px;
 }
+@media (max-width: 1200px) {
+  .hero-section .description h1 {
+    font-size: 64px;
+  }
+  .span {
+    font-size: 80px;
+  }
+}
+@media (max-width: 1090px) {
+  .hero-section .description h1 {
+    font-size: 52px;
+  }
+  .span {
+    font-size: 65px;
+  }
+}
+@media (max-width: 870px) {
+  .hero-section .description {
+    width: 60vw;
+  }
+}
+/*Service sekcija*/
 .service {
   background-color: var(--primarycolor);
-  height: 65vh;
+  height: 67vh;
   padding: 20px 10px;
 }
 .service h1 {
@@ -157,6 +230,7 @@ nav a.active {
   position: relative;
   padding: 30px 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 .service .service-container .card h3 {
   font-size: 24px;
@@ -170,6 +244,7 @@ nav a.active {
   font-optical-sizing: auto;
   font-weight: 400;
   color: white;
+  font-size: 18px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.55);
 }
 .service .service-container .card .icon {
@@ -192,8 +267,8 @@ nav a.active {
   transform: translateX(-50%);
 }
 .service .service-container .card .info button {
-  width: 100px;
-  height: 35px;
+  width: 130px;
+  height: 40px;
   border-radius: 20px;
   border: none;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
@@ -218,4 +293,59 @@ nav a.active {
 }
 .service .service-container .card3 .icon {
   background-image: url(../slike/3.png);
+}
+@media (max-width: 1200px) {
+  .service .service-container .card {
+    width: 300px;
+  }
+}
+@media (max-width: 1090px) {
+  .service .service-container .card {
+    width: 270px;
+  }
+}
+@media (max-width: 1000px) {
+  .service .service-container .card {
+    width: 250px;
+  }
+}
+@media (max-width: 940px) {
+  .service .service-container .card {
+    width: 220px;
+    gap: 15px;
+  }
+  .service .service-container .card h3 {
+    font-size: 20px;
+  }
+  .service .service-container .card p {
+    font-size: 15px;
+  }
+  .service .service-container .card .info button {
+    width: 110px;
+    height: 35px;
+  }
+}
+@media (max-width: 870px) {
+  .service .service-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .service {
+    height: fit-content;
+    padding-bottom: 100px;
+  }
+  .service .service-container .card {
+    width: 330px;
+    gap: 20px;
+  }
+  .service .service-container .card h3 {
+    font-size: 24px;
+  }
+  .service .service-container .card p {
+    font-size: 18px;
+  }
+  .service .service-container .card .info button {
+    width: 130px;
+    height: 40px;
+  }
 }
