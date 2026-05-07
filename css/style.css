@@ -1144,16 +1144,13 @@ footer .lower {
   }
 }
 
-/*  Ovdje su dodani stilovi za dark mode */
 body.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
+  background-color: #1e1e1e;
 }
 
 body.dark-mode header {
   background-color: #1e1e1e;
 }
-
 body.dark-mode nav a {
   color: #ffffff;
 }
@@ -1168,11 +1165,6 @@ body.dark-mode .hero-section {
   color: #ffffff;
 }
 
-body.dark-mode .service {
-  background-color: #121212;
-  color: #ffffff;
-}
-
 body.dark-mode .forum {
   background-color: #1e1e1e;
   color: #ffffff;
@@ -1184,6 +1176,17 @@ body.dark-mode .forum span {
 }
 
 body.dark-mode .finalsection {
-  background-color: #1e1e1e;
   color: #ffffff;
+}
+body.dark-mode .faq h1 {
+  color: white;
+}
+body.dark-mode footer {
+  background-color: #1e1e1e;
+  color: white;
+}
+body.dark-mode footer .mail p,
+body.dark-mode footer h3,
+body.dark-mode footer a {
+  color: white;
 }
