@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css"
+    />
     <title>Kontakt</title>
   </head>
   <body>
@@ -17,16 +25,15 @@
           alt="logo"
         />
       </div>
-      <nav>
+      <nav id="menu">
+        <a href="#"><button class="theme">mrak</button></a>
         <a href="index.html" class="active">Početna</a>
         <a href="materijali.html">Materijali</a>
         <a href="savjeti">Savjeti</a>
         <a href="kontakt.html">Kontakt</a>
-      </nav>
-      <div class="button">
         <a href="#"><button class="gitrepo">Git</button></a>
-      </div>
-      <div class="hamburger">
+      </nav>
+      <div class="hamburger" onclick="toggleMenu()">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
@@ -96,5 +103,6 @@
       </div>
       <div class="lower">&copy;FETHub 2026</div>
     </footer>
+    <script src="javascript/main.js"></script>
   </body>
 </html>
