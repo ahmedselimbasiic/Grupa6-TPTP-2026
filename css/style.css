@@ -1143,3 +1143,47 @@ footer .lower {
     height: 200px;
   }
 }
+
+/*  Ovdje su dodani stilovi za dark mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode header {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode nav a {
+  color: #ffffff;
+}
+
+body.dark-mode nav a:hover,
+body.dark-mode nav a.active {
+  color: var(--secondarycolor);
+}
+
+body.dark-mode .hero-section {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+body.dark-mode .service {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode .forum {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+body.dark-mode .forum h1,
+body.dark-mode .forum span {
+  color: #ffffff;
+}
+
+body.dark-mode .finalsection {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
