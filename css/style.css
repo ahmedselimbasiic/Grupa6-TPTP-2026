@@ -7,6 +7,7 @@
   --secondarycolor: #50d1ba;
   --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   --text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  --black-font: #223231;
 }
 
 * {
@@ -656,6 +657,94 @@ nav a.active {
   right: 0;
   background: linear-gradient(to left, white, transparent);
 }
+@media (max-width: 1100px) {
+  .forum h1 {
+    font-size: 42px;
+  }
+
+  .controls {
+    width: 100%;
+    gap: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .forum {
+    padding: 20px 10px;
+  }
+
+  .forum h1 {
+    font-size: 32px;
+  }
+
+  .slidertrack .card {
+    width: 85vw;
+    height: auto;
+    min-height: 380px;
+    padding: 25px 20px;
+    gap: 10px;
+  }
+
+  .slidertrack .img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .slidertrack .card h1 {
+    font-size: 22px;
+  }
+
+  .slidertrack .card p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .controls {
+    width: 100%;
+    gap: 40px;
+    height: 80px;
+  }
+
+  .controls .btn {
+    width: 50px;
+    height: 50px;
+  }
+  .forum .icon {
+    width: 80px;
+    opacity: 0.3;
+  }
+
+  .forum .laptop {
+    bottom: 2%;
+    left: 2%;
+  }
+
+  .forum .cpu {
+    top: 5%;
+    right: 2%;
+  }
+
+  .slider::before,
+  .slider::after {
+    width: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .forum h1 {
+    font-size: 28px;
+  }
+
+  .slidertrack .card {
+    width: 90vw;
+  }
+
+  .quotes {
+    width: 35px;
+    height: 35px;
+    top: 5px;
+    right: 10px;
+  }
+}
 .faq {
   width: 100%;
   max-width: 1100px;
@@ -811,8 +900,15 @@ footer .upper {
   padding: 0 40px;
   display: grid;
   grid-template-columns: 1fr 1.5fr 1fr;
-  gap: 40px;
+  gap: 50px;
   align-items: start;
+}
+footer h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: var(--black-font);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 footer .authors,
 footer .contact {
@@ -826,6 +922,7 @@ footer .contact {
   display: flex;
   align-items: center;
   gap: 12px;
+  width: 100%;
 }
 .author .icon,
 .mail .icon {
@@ -850,7 +947,7 @@ footer .contact {
 
 footer .contact .mail p {
   font-family: "Lato", monospace;
-  color: #066a52;
+  color: #223231;
 }
 footer .meni {
   display: flex;
@@ -892,15 +989,157 @@ footer .lower {
   footer .upper {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 40px;
+    padding: 0 20px;
+  }
+  footer .authors,
+  footer .contact {
+    align-items: center;
   }
 
   .author,
   .mail {
-    justify-content: center;
+    justify-content: flex-start;
+    width: 250px;
+    margin: 0 auto;
+  }
+
+  .author p,
+  .mail p {
+    font-size: 14px;
+  }
+
+  .mail p {
+    font-family: "Courier New", monospace;
+    word-break: break-word;
   }
 
   footer .meni {
     text-align: center;
     margin-top: 20px;
+    padding-right: 0;
+  }
+
+  footer .meni h3 {
+    text-align: center;
+  }
+
+  footer .meni a {
+    display: inline-block;
+    margin: 5px 0;
+  }
+
+  footer .meni a.active {
+    border-right: none;
+    border-bottom: 2px solid #066a52;
+    padding-right: 0;
+    padding-bottom: 3px;
+  }
+}
+.finalsection {
+  background-color: var(--primarycolor);
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+.finalsection .container {
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--card-shadow);
+}
+.finalsection .container .info,
+.finalsection .container .image {
+  height: 60vh;
+  width: 30vw;
+}
+.finalsection .container .image {
+  background-image: url(../slike/young-students-watching-laptop.jpg);
+  background-size: cover;
+  padding: 20px;
+}
+.finalsection .container .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+  font-family: "Lato", sans-serif;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--black-font);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.finalsection .container span {
+  font-family: "Playfair", serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 40px;
+  color: black;
+}
+.finalsection .container .info button {
+  height: 40px;
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--primarycolor);
+  color: white;
+  font-size: 16px;
+  box-shadow: var(--card-shadow);
+  text-shadow: var(--text-shadow);
+  transition: 0.2s ease-in-out;
+}
+.finalsection .container .info button:hover {
+  background-color: rgba(0, 109, 89, 0.9);
+}
+@media (max-width: 1150px) {
+  .finalsection {
+    padding: 60px 40px;
+  }
+
+  .finalsection .container {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+
+  .finalsection .container .info,
+  .finalsection .container .image {
+    width: 100%;
+    height: auto;
+  }
+
+  .finalsection .container .image {
+    height: 300px;
+    order: -1;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .finalsection .container .info {
+    border-radius: 0 0 20px 20px;
+    padding: 40px 25px;
+  }
+
+  .finalsection .container h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .finalsection .container span {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .finalsection .container .info button {
+    width: 100%;
+  }
+
+  .finalsection .container .image {
+    height: 200px;
   }
 }
