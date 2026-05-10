@@ -44,15 +44,45 @@
     </header>
     <div class="contact-container">
       <div class="contact-box">
-        <div class="right">
-          <h2>Imate pitanje? Kontaktirajte nas!</h2>
-          <input type="text" class="field" placeholder="Vaše ime" />
-          <input type="text" class="field" placeholder="Vaše prezime" />
-          <input type="email" class="field" placeholder="Vaš email" />
-          <input type="text" class="field" placeholder="Vaš broj telefona" />
-
+        <h2>Imate pitanje? Kontaktirajte nas!</h2>
+        <form action="#" method="post">
+          <label for="ime">Ime:</label>
+          <input
+            type="text"
+            id="ime"
+            name="ime"
+            class="field"
+            placeholder="Vaše ime"
+            required
+          />
+          <label for="prezime">Prezime:</label>
+          <input
+            type="text"
+            id="prezime"
+            name="prezime"
+            class="field"
+            placeholder="Vaše prezime"
+            required
+          />
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="field"
+            placeholder="Vaš email"
+            required
+          />
+          <label for="telefon">Broj telefona:</label>
+          <input
+            type="text"
+            id="telefon"
+            name="telefon"
+            class="field"
+            placeholder="Vaš broj telefona"
+          />
           <label for="problem">Problem:</label>
-          <select class="field" name="problem">
+          <select id="problem" class="field" name="problem" required>
             <option value="">Izaberi</option>
             <option value="Ispiti i rokovi">Ispiti i rokovi</option>
             <option value="Zadaće i projekti">Zadaće i projekti</option>
@@ -60,11 +90,16 @@
             <option value="Upis i administracija">Upis i administracija</option>
             <option value="Ostalo">Ostalo</option>
           </select>
+          <label for="poruka">Poruka:</label>
           <textarea
+            id="poruka"
+            name="poruka"
             class="field"
             placeholder="Opišite problem ili pitanje"
+            required
           ></textarea>
-        </div>
+          <button type="submit" class="btn">Pošalji</button>
+        </form>
       </div>
     </div>
     <footer id="footer">
