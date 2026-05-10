@@ -2,12 +2,14 @@
 function toggleMenu() {
   const menu = document.getElementById("menu");
   const hamburger = document.querySelector(".hamburger");
-  
+
   if (menu && hamburger) {
     menu.classList.toggle("active");
     hamburger.classList.toggle("is-active");
   } else {
-    console.error("Hamburger menu elementi nisu pronađeni! Provjeri ID i klase.");
+    console.error(
+      "Hamburger menu elementi nisu pronađeni! Provjeri ID i klase.",
+    );
   }
 }
 
@@ -20,11 +22,11 @@ if (themeButton) {
     darkmode = !darkmode;
     if (darkmode) {
       document.body.classList.add("dark-mode");
-      themeButton.textContent = "svijetlo";
+      themeButton.innerHTML = '<i class="fa-solid fa-sun"></i>';
       console.log("Dark mode je UKLJUČEN");
     } else {
       document.body.classList.remove("dark-mode");
-      themeButton.textContent = "mrak";
+      themeButton.innerHTML = '<i class="fa-solid fa-moon"></i>';
       console.log("Dark mode je ISKLJUČEN");
     }
   });
@@ -32,35 +34,33 @@ if (themeButton) {
   console.error("Dugme za temu nije pronađeno!");
 }
 
- 
 // Swiper carousel - navigacija kroz slajdove sa strelicama i tačkama
 var swiper = new Swiper(".slide-content", {
-    slidesPerView: 3,
-    spaceBetween: 25,
-    loop: true,
-    centerSlide: 'true',
-    fade: 'true',
-    grabCursor: 'true',
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      dynamicBullets: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+  slidesPerView: 3,
+  spaceBetween: 25,
+  loop: true,
+  centerSlide: "true",
+  fade: "true",
+  grabCursor: "true",
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 
-    breakpoints:{
-        0: {
-            slidesPerView: 1,
-        },
-        520: {
-            slidesPerView: 2,
-        },
-        950: {
-            slidesPerView: 3,
-        },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
     },
-  });
-
+    520: {
+      slidesPerView: 2,
+    },
+    950: {
+      slidesPerView: 3,
+    },
+  },
+});

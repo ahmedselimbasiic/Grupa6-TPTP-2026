@@ -25,12 +25,15 @@
           alt="logo"
         />
       </div>
+      <div class="logo-image-black">
+        <img src="slike/logo-white.png" alt="logo" />
+      </div>
       <nav id="menu">
-        <a href="#"><button class="theme">mrak</button></a>
-        <a href="index.html" class="active">Početna</a>
+        <a href="index.html">Početna</a>
         <a href="materijali.html">Materijali</a>
         <a href="savjeti">Savjeti</a>
-        <a href="kontakt.html">Kontakt</a>
+        <a href="kontakt.html" class="active">Kontakt</a>
+        <button class="theme"><i class="fa-solid fa-moon"></i></button>
         <a href="#"><button class="gitrepo">Git</button></a>
       </nav>
       <div class="hamburger" onclick="toggleMenu()">
@@ -39,7 +42,7 @@
         <span class="bar"></span>
       </div>
     </header>
-    <div class="container">
+    <div class="contact-container">
       <div class="contact-box">
         <h2>Imate pitanje? Kontaktirajte nas!</h2>
         <form action="#" method="post">
@@ -99,41 +102,44 @@
         </form>
       </div>
     </div>
-    <footer>
+    <footer id="footer">
       <div class="upper">
         <div class="authors">
+          <h3>Autori</h3>
           <div class="author">
-            <div class="icon"></div>
+            <div class="icon"><i class="fa-solid fa-user-gear"></i></div>
             <p>Aida Halilčević</p>
           </div>
           <div class="author">
-            <div class="icon"></div>
+            <div class="icon"><i class="fa-solid fa-user-gear"></i></div>
             <p>Ahmed Mahmutović</p>
           </div>
           <div class="author">
-            <div class="icon"></div>
+            <div class="icon"><i class="fa-solid fa-user-gear"></i></div>
             <p>Ahmed Selimbašić</p>
           </div>
         </div>
         <div class="contact">
+          <h3>Kontakt</h3>
           <div class="mail">
-            <div class="icon"></div>
+            <div class="icon"><i class="fa-solid fa-envelope"></i></div>
             <p>aida.halilcevic@fet.ba</p>
           </div>
           <div class="mail">
-            <div class="icon"></div>
+            <div class="icon"><i class="fa-solid fa-envelope"></i></div>
             <p>ahmed.mahmutovic@fet.ba</p>
           </div>
           <div class="mail">
-            <div class="icon"></div>
+            <div class="icon"><i class="fa-solid fa-envelope"></i></div>
             <p>ahmed.selimbasic@fet.ba</p>
           </div>
         </div>
         <div class="meni">
-          <a href="index.html" class="active">Početna</a>
+          <h3>Meni</h3>
+          <a href="index.html">Početna</a>
           <a href="materijali.html">Materijali</a>
           <a href="savjeti">Savjeti</a>
-          <a href="kontakt.html">Kontakt</a>
+          <a href="kontakt.html" class="active">Kontakt</a>
         </div>
       </div>
       <div class="lower">&copy;FETHub 2026</div>

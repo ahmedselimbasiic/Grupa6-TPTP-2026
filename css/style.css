@@ -41,7 +41,18 @@ body {
   display: block;
   cursor: pointer;
 }
-
+.logo-image-black {
+  display: none;
+  width: 250px;
+  height: 70px;
+}
+.logo-image-black img {
+  display: none;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  cursor: pointer;
+}
 header {
   padding: 10px 100px;
   display: flex;
@@ -82,7 +93,6 @@ nav a.active {
 }
 
 .gitrepo {
-  margin-left: 30px;
   width: 120px;
   height: 40px;
   background-color: white;
@@ -101,7 +111,22 @@ nav a.active {
   background-color: var(--primarycolor);
   color: white;
 }
-
+.theme {
+  height: 40px;
+  width: 40px;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  background-color: #1e1e1e;
+  margin-left: 25px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.theme:hover {
+  background-color: white;
+  color: #1e1e1e;
+  box-shadow: var(--card-shadow);
+}
 .hamburger {
   display: none;
   cursor: pointer;
@@ -1038,7 +1063,7 @@ footer .lower {
 }
 .finalsection {
   background-color: var(--primarycolor);
-  padding: 100px;
+  padding: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1050,7 +1075,7 @@ footer .lower {
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
-  box-shadow: var(--card-shadow);
+  gap: 0px;
 }
 .finalsection .container .info,
 .finalsection .container .image {
@@ -1066,7 +1091,7 @@ footer .lower {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
   padding: 30px;
   font-family: "Lato", sans-serif;
   background-color: rgba(255, 255, 255, 0.9);
@@ -1146,18 +1171,34 @@ footer .lower {
 
 /*  Ovdje su dodani stilovi za dark mode */
 body.dark-mode {
-  background-color: #121212;
+  background-color: #1e1e1e;
   color: #ffffff;
 }
-
+body.dark-mode .logo-image {
+  display: none;
+}
+body.dark-mode .logo-image-black {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 body.dark-mode header {
   background-color: #1e1e1e;
 }
-
+body.dark-mode header .gitrepo {
+  border: none;
+}
 body.dark-mode nav a {
   color: #ffffff;
 }
-
+body.dark-mode nav button {
+  background-color: white;
+  color: #1e1e1e;
+}
+body.dark-mode nav button:hover {
+  background-color: #1e1e1e;
+  color: white;
+}
 body.dark-mode nav a:hover,
 body.dark-mode nav a.active {
   color: var(--secondarycolor);
@@ -1169,10 +1210,12 @@ body.dark-mode .hero-section {
 }
 
 body.dark-mode .service {
-  background-color: #121212;
+  background-color: var(--primarycolor);
   color: #ffffff;
 }
-
+body.dark-mode .faq h1 {
+  color: white;
+}
 body.dark-mode .forum {
   background-color: #1e1e1e;
   color: #ffffff;
@@ -1184,38 +1227,49 @@ body.dark-mode .forum span {
 }
 
 body.dark-mode .finalsection {
-  background-color: #1e1e1e;
+  background-color: var(--primarycolor);
   color: #ffffff;
 }
-/* Kontakt stranica */
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
-
-* {
-  box-sizing: border-box;
+body.dark-mode footer {
+  background-color: #1e1e1e;
 }
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Lato", sans-serif;
+body.dark-mode footer h1,
+body.dark-mode footer h3,
+body.dark-mode footer a {
+  color: white;
 }
-
-.container {
+body.dark-mode .contact .mail p {
+  color: white;
+}
+body.dark-mode .authors .author p {
+  color: white;
+}
+body.dark-mode footer .lower {
+  color: white;
+  border-top: 1px solid white;
+}
+body.dark-mode .finalsection .container .info {
+  background-color: #1e1e1e;
+  color: white;
+}
+body.dark-mode .finalsection .container .info span {
+  color: white;
+}
+.contact-container {
   width: 100%;
   min-height: 100vh;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
-  padding: 20px;
-
+  padding: 80px;
   position: relative;
   overflow: hidden;
+  font-family: "Lato", sans-serif;
+  border-radius: 35px;
 }
 
 /* Blur pozadina */
-.container::before {
+.contact-container::before {
   content: "";
 
   position: absolute;
@@ -1233,9 +1287,7 @@ body {
 
   z-index: -2;
 }
-
-/* Tamni overlay */
-.container::after {
+.contact-container::after {
   content: "";
 
   position: absolute;
