@@ -2,6 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Nunito:wght@400;500&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css");
 :root {
   --primarycolor: #036d59;
   --secondarycolor: #50d1ba;
@@ -1150,6 +1152,12 @@ body.dark-mode .contact-box h2 {
 body.dark-mode .contact-box form label {
   color: white;
 }
+body.dark-mode .materijali h1 {
+  color: white;
+}
+body.dark-mode .materijali .spann {
+  color: white;
+}
 .contact-container {
   width: 100%;
   min-height: 100vh;
@@ -1295,4 +1303,419 @@ textarea.field {
 
 .btn:hover {
   background-color: #084c3b;
+}
+.hero-section-materials {
+  margin: 15px;
+  height: 70vh;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url(../slike/materijali.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--card-shadow);
+}
+.hero-section-materials .description {
+  width: 90vw;
+  text-align: center;
+  padding-bottom: 30px;
+}
+.hero-section-materials .description h1 {
+  font-size: 72px;
+  color: aliceblue;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.55);
+  margin-bottom: 0px;
+  line-height: 0.9;
+}
+.hero-section-materials .description p {
+  color: white;
+  font-size: 1.1rem;
+  font-family: "Lato", sans-serif;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.55);
+  margin-top: 15px;
+}
+.hero-section-materials .span {
+  font-family: "Playfair", serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 90px;
+}
+@media (max-width: 1200px) {
+  .hero-section-materials .description h1 {
+    font-size: 64px;
+  }
+  .hero-section-materials .span {
+    font-size: 80px;
+  }
+}
+@media (max-width: 1090px) {
+  .hero-section-materials .description h1 {
+    font-size: 52px;
+  }
+  .hero-section-materials .span {
+    font-size: 65px;
+  }
+}
+@media (max-width: 870px) {
+  .hero-section-materials .description {
+    width: 90vw;
+  }
+}
+
+/* === MATERIJALI SECTION === */
+.materijali {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.materijali h1 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 56px;
+  color: #223231;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.55);
+  line-height: 0.9;
+  margin-bottom: 25px;
+}
+.materijali .spann {
+  color: #223231;
+  font-family: "Playfair", serif;
+  font-weight: 400;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+/* === GRID === */
+.materijali .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* === KARTICE === */
+.materijali .card {
+  background: #ffffff;
+  border: 0.5px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 1.8rem 1.4rem 1.6rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.step-badge {
+  display: inline-block;
+  background: #1d9e75;
+  color: #e1f5ee;
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 4px 14px;
+  margin-bottom: 1.2rem;
+  align-self: flex-start;
+}
+
+.step-num {
+  font-family: "Lato", sans-serif;
+  font-size: 3.8rem;
+  font-weight: 900;
+  color: #1a1a1a;
+  line-height: 1;
+  margin-bottom: 0.8rem;
+}
+
+.materijali .card h3 {
+  font-family: "Lato", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  color: #1a1a1a;
+}
+
+.materijali .card p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0;
+  line-height: 1.6;
+}
+.materijali a {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: 2rem;
+  display: block;
+  text-decoration: none;
+}
+
+.materijali button {
+  background: #1d9e75;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.9rem 3rem;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.materijali button:hover {
+  background: #0f6e56;
+}
+
+@media (max-width: 900px) {
+  .materijali .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-section-materials {
+    padding: 3rem 1.25rem;
+  }
+
+  .materijali {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .materijali .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .step-num {
+    font-size: 2.8rem;
+  }
+
+  .materijali .card {
+    padding: 1.2rem 1rem;
+  }
+
+  .materijali .card h3 {
+    font-size: 1rem;
+  }
+
+  .materijali .card p {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .materijali .container {
+    grid-template-columns: 1fr;
+  }
+
+  .materijali button {
+    width: 100%;
+  }
+}
+.prijemni {
+  padding: 3rem 0;
+  width: 100%;
+}
+
+.prijemni .container {
+  background: var(--primarycolor);
+  border-radius: 0;
+  padding: 3.5rem 5rem 3.5rem 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 100px;
+  text-align: left;
+}
+
+.pj-tag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.18);
+  color: #e1f5ee;
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 4px 14px;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.pj-left h2 {
+  font-family: "Lato", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #ffffff;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.pj-left p {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.pj-stats {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.8rem;
+  align-items: center;
+}
+
+.pj-stat-num {
+  font-family: "Lato", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+}
+
+.pj-stat-label {
+  font-family: "Nunito", sans-serif;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 3px;
+}
+
+.pj-divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.pj-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  min-width: 260px;
+}
+
+.pj-card {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 0.9rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.pj-card i {
+  font-size: 20px;
+  color: #fff;
+}
+
+.pj-card-text {
+  font-family: "Nunito", sans-serif;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.4;
+}
+
+.pj-card-text strong {
+  display: block;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.pj-right a {
+  width: 100%;
+  display: block;
+  text-decoration: none;
+}
+
+.pj-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #ffffff;
+  color: #0f6e56;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  padding: 0.9rem 2rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.2s;
+}
+
+.pj-btn:hover {
+  background: #e1f5ee;
+}
+
+@media (max-width: 900px) {
+  .materijali .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .prijemni .container {
+    padding: 2.5rem 2rem;
+  }
+  .pj-left h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-section-materials {
+    padding: 2.5rem 1.25rem;
+  }
+  .materijali {
+    padding: 2.5rem 1.25rem;
+  }
+  .materijali .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .step-num {
+    font-size: 2.8rem;
+  }
+  .materijali .card {
+    padding: 1.2rem 1rem;
+  }
+  .materijali .card h3 {
+    font-size: 1rem;
+  }
+  .materijali .card p {
+    font-size: 0.875rem;
+  }
+  .prijemni .container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1.5rem;
+  }
+  .pj-right {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+@media (max-width: 400px) {
+  .materijali .container {
+    grid-template-columns: 1fr;
+  }
+  .materijali button {
+    width: 100%;
+  }
 }
