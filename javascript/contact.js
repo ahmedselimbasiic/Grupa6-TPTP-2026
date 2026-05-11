@@ -1,6 +1,6 @@
 // ================== EMAIL JS INIT ==================
 
-emailjs.init("Phy4KH7uwmY394MMi"); // VAŠ EMAILJS USER ID
+emailjs.init("Phy4KH7uwmY394MMi");
 
 // ================== FORM ==================
 
@@ -23,8 +23,8 @@ form.addEventListener("submit", function (e) {
   // SLANJE MAILA
   emailjs
     .sendForm(
-      "service_v6ymm2n", // VAŠ EMAILJS SERVICE ID
-      "template_d5df8m8 ", // VAŠ EMAILJS TEMPLATE ID
+      "service_v6ymm2n",
+      "template_d5df8m8",
       form
     )
     .then(() => {
@@ -45,7 +45,7 @@ function showPopup(message, color) {
   popup.innerText = message;
 
   popup.style.position = "fixed";
-  popup.style.top = "20px";
+  popup.style.bottom = "20px";
   popup.style.right = "20px";
   popup.style.background = color;
   popup.style.color = "white";
