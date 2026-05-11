@@ -1527,6 +1527,7 @@ textarea.field {
 .prijemni {
   padding: 3rem 0;
   width: 100%;
+  margin-bottom: 0px;
 }
 
 .prijemni .container {
