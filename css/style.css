@@ -288,8 +288,8 @@ nav a.active {
 /*Service sekcija*/
 .service {
   background-color: var(--primarycolor);
-  height: 67vh;
-  padding: 20px 10px;
+  height: fit-content;
+  padding: 40px 20px;
 }
 .service h1 {
   text-align: center;
@@ -310,6 +310,7 @@ nav a.active {
   display: flex;
   justify-content: center;
   gap: 75px;
+  margin-bottom: 50px;
 }
 .service .service-container .card {
   width: 330px;
@@ -1717,5 +1718,732 @@ textarea.field {
   }
   .materijali button {
     width: 100%;
+  }
+}
+.sv-section {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sv-header {
+  margin-bottom: 3rem;
+}
+
+.sv-tag {
+  display: inline-block;
+  background: #e1f5ee;
+  color: #085041;
+  font-family: "Lato", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 4px 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.sv-header h1 {
+  font-family: "Lato", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+}
+
+.sv-header p {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.sv-group {
+  border: 0.5px solid #e0e0e0;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background: #fff;
+}
+
+.sv-group-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 1.2rem 1.5rem;
+  border-bottom: 0.5px solid #e0e0e0;
+}
+
+.sv-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #e1f5ee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sv-icon i {
+  font-size: 18px;
+  color: #0f6e56;
+}
+
+.sv-group-title {
+  font-family: "Lato", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.sv-group-sub {
+  font-family: "Nunito", sans-serif;
+  font-size: 12px;
+  color: #888;
+  margin-top: 2px;
+}
+
+.sv-badge {
+  margin-left: auto;
+  background: #e1f5ee;
+  color: #085041;
+  font-family: "Lato", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 3px 10px;
+}
+
+.sv-items {
+  padding: 0.5rem 0;
+}
+
+.sv-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 0.5px solid #f0f0f0;
+}
+
+.sv-item:last-child {
+  border-bottom: none;
+}
+
+.sv-bullet {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #1d9e75;
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+.sv-item-title {
+  font-family: "Lato", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 3px;
+}
+
+.sv-item-desc {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.82rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.sv-sub-items {
+  list-style: none;
+  padding: 0.4rem 0 0.2rem 1rem;
+  margin: 0;
+}
+
+.sv-sub-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 0.4rem 0;
+}
+
+.sv-sub-bullet {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  border: 1.5px solid #1d9e75;
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+.sv-sub-item-text {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.82rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.sv-sub-item-text strong {
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+@media (max-width: 600px) {
+  .sv-section {
+    padding: 2.5rem 1.25rem;
+  }
+  .sv-header h1 {
+    font-size: 1.6rem;
+  }
+  .sv-group-header {
+    padding: 1rem 1.2rem;
+  }
+  .sv-item {
+    padding: 0.7rem 1.2rem;
+  }
+  .sv-badge {
+    display: none;
+  }
+}
+
+.tbl-section {
+  background: var(--primarycolor);
+  width: 100%;
+  padding: 4rem 0;
+}
+
+.tbl-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.tbl-header {
+  margin-bottom: 2.5rem;
+}
+
+.tbl-tag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.18);
+  color: #e1f5ee;
+  font-family: "Lato", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 4px 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.tbl-header h2 {
+  font-family: "Lato", sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.tbl-header p {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+}
+
+.tbl-wrap {
+  overflow-x: auto;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+thead tr {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+th {
+  font-family: "Lato", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #e1f5ee;
+  padding: 0.9rem 1.2rem;
+  text-align: left;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+td {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 0.85rem 1.2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  vertical-align: top;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover td {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.sem-badge {
+  display: inline-block;
+  font-family: "Lato", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 2px 10px;
+}
+
+.sem1 {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.sem2 {
+  background: rgba(4, 52, 44, 0.4);
+  color: #9fe1cb;
+}
+
+.diff-dot {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.82rem;
+}
+
+.d1::before,
+.d2::before,
+.d3::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.d1::before {
+  background: #9fe1cb;
+}
+.d2::before {
+  background: #fac775;
+}
+.d3::before {
+  background: #f09595;
+}
+
+/* ================================
+   SEKCIJA 3 — BIJELA / KARTICE
+================================ */
+.pred-section {
+  padding: 4rem 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.pred-header {
+  margin-bottom: 3rem;
+}
+
+.pred-tag {
+  display: inline-block;
+  background: #e1f5ee;
+  color: #085041;
+  font-family: "Lato", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 4px 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.pred-header h2 {
+  font-family: "Lato", sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.pred-header p {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.sem-title {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+  color: #1a1a1a;
+  margin: 2rem 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sem-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e0e0e0;
+}
+
+.sem-title-2 {
+  margin-top: 3rem;
+}
+
+.pred-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 14px;
+}
+
+.pred-card {
+  border: 0.5px solid #e0e0e0;
+  border-radius: 14px;
+  padding: 1.2rem;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pred-card-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #e1f5ee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pred-card-icon i {
+  font-size: 20px;
+  color: #0f6e56;
+}
+
+.pred-card h3 {
+  font-family: "Lato", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.3;
+}
+
+.pred-placeholder {
+  background: #f5f5f5;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  padding: 0.5rem 0.8rem;
+  font-family: "Nunito", sans-serif;
+  font-size: 0.78rem;
+  color: #999;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.pred-card-footer {
+  margin-top: auto;
+  padding-top: 0.6rem;
+  border-top: 0.5px solid #e0e0e0;
+  font-family: "Nunito", sans-serif;
+  font-size: 0.75rem;
+  color: #999;
+}
+
+/* ================================
+   SEKCIJA 4 — ZELENA / RESURSI
+================================ */
+.res-section {
+  background: var(--primarycolor);
+  width: 100%;
+  padding: 4rem 0;
+}
+
+.res-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.res-header {
+  margin-bottom: 3rem;
+}
+
+.res-tag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.18);
+  color: #e1f5ee;
+  font-family: "Lato", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 4px 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.res-header h2 {
+  font-family: "Lato", sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.res-header p {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+}
+
+.res-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.res-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
+  padding: 1.4rem;
+}
+
+.res-card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+.res-card-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.res-card-icon i {
+  font-size: 20px;
+  color: #fff;
+}
+
+.res-card h3 {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.res-card-sub {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 2px;
+}
+
+.res-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.res-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-family: "Nunito", sans-serif;
+  font-size: 0.83rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5;
+}
+
+.res-list li::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #9fe1cb;
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+/* ================================
+   RESPONZIVNOST
+================================ */
+@media (max-width: 768px) {
+  .sv-section,
+  .pred-section {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .sv-header h1,
+  .pred-header h2,
+  .tbl-header h2,
+  .res-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .tbl-inner,
+  .res-inner {
+    padding: 0 1.25rem;
+  }
+
+  .tbl-section,
+  .res-section {
+    padding: 2.5rem 0;
+  }
+
+  .sv-badge {
+    display: none;
+  }
+
+  .res-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .pred-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sv-group-header {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 360px) {
+  .pred-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.timer-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  background: rgba(80, 209, 186, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  padding: 1.2rem 2.5rem;
+  margin: 28px auto 0;
+  width: fit-content;
+  max-width: 90%;
+}
+
+.timer-card .icon-timer {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.timer-card .icon-timer i {
+  font-size: 28px;
+  color: #fff;
+}
+
+.timer-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.timer-info h3 {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
+}
+
+.timer-sub {
+  font-family: "Lato", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.7);
+  white-space: nowrap;
+  margin-top: 3px;
+}
+
+.timer-grid {
+  display: flex;
+  gap: 8px;
+}
+
+.timer-box {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 8px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.timer-num {
+  font-family: "Lato", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: white;
+  line-height: 1;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.timer-label {
+  font-family: "Lato", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 750px) {
+  .timer-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.4rem 2rem;
+  }
+
+  .timer-info {
+    flex-direction: column;
+    gap: 14px;
   }
 }

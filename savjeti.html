@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="slike/icon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css"
+    />
+    <title>Savjeti</title>
+  </head>
+  <body>
+    <header>
+      <div class="logoimg">
+        <img src="slike/icon.png" alt="" />
+      </div>
+      <div class="logo-image">
+        <img
+          src="slike/Gemini_Generated_Image_ft3brkft3brkft3b-removebg-preview.png"
+          alt="logo"
+        />
+      </div>
+      <div class="logo-image-black">
+        <img src="slike/logo-white.png" alt="logo" />
+      </div>
+      <nav id="menu">
+        <a href="index.html">Početna</a>
+        <a href="materijali.html">Materijali</a>
+        <a href="savjeti.html" class="active">Savjeti</a>
+        <a href="kontakt.html">Kontakt</a>
+        <button class="theme"><i class="fa-solid fa-moon"></i></button>
+        <a href="#"><button class="gitrepo">Git</button></a>
+      </nav>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </header>
+    <div class="hero-section">
+      <div class="description">
+        <h1>
+          Savjeti koji mogu <br />spasiti <span class="span">godinu!</span>
+        </h1>
+      </div>
+    </div>
+
+    <section class="sv-section">
+      <div class="sv-header">
+        <div class="sv-tag">Savjeti</div>
+        <h1>Kako se efikasno pripremiti</h1>
+        <p>
+          Praktični savjeti podijeljeni po kategorijama — od organizacije do
+          tehnike učenja.
+        </p>
+      </div>
+
+      <div class="sv-group">
+        <div class="sv-group-header">
+          <div class="sv-icon"><i class="ti ti-calendar"></i></div>
+          <div>
+            <div class="sv-group-title">Organizacija vremena</div>
+            <div class="sv-group-sub">Planiranje i raspored učenja</div>
+          </div>
+          <span class="sv-badge">3 savjeta</span>
+        </div>
+        <div class="sv-items">
+          <div class="sv-item">
+            <div class="sv-bullet"></div>
+            <div class="sv-item-text">
+              <div class="sv-item-title">Napravi sedmični plan</div>
+              <div class="sv-item-desc">
+                Rasporedi gradivo po danima i drži se rasporeda.
+              </div>
+              <ul class="sv-sub-items">
+                <li class="sv-sub-item">
+                  <div class="sv-sub-bullet"></div>
+                  <div class="sv-sub-item-text">
+                    <strong>Jutarnje sesije</strong> — teže gradivo dok si svjež
+                  </div>
+                </li>
+                <li class="sv-sub-item">
+                  <div class="sv-sub-bullet"></div>
+                  <div class="sv-sub-item-text">
+                    <strong>Popodne</strong> — ponavljanje i zadaci
+                  </div>
+                </li>
+                <li class="sv-sub-item">
+                  <div class="sv-sub-bullet"></div>
+                  <div class="sv-sub-item-text">
+                    <strong>Večer</strong> — kratki pregled dana, bez novog
+                    gradiva
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="sv-item">
+            <div class="sv-bullet"></div>
+            <div class="sv-item-text">
+              <div class="sv-item-title">Pomodoro tehnika</div>
+              <div class="sv-item-desc">
+                25 minuta učenja, 5 minuta pauze — efikasno i bez sagorijevanja.
+              </div>
+            </div>
+          </div>
+          <div class="sv-item">
+            <div class="sv-bullet"></div>
+            <div class="sv-item-text">
+              <div class="sv-item-title">Izbjegavaj prokrastinaciju</div>
+              <div class="sv-item-desc">
+                Počni sa najlakšim zadatkom kako bi uhvatio ritam.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sv-group">
+        <div class="sv-group-header">
+          <div class="sv-icon"><i class="ti ti-brain"></i></div>
+          <div>
+            <div class="sv-group-title">Tehnika učenja</div>
+            <div class="sv-group-sub">Kako zapamtiti gradivo brže i duže</div>
+          </div>
+          <span class="sv-badge">3 savjeta</span>
+        </div>
+        <div class="sv-items">
+          <div class="sv-item">
+            <div class="sv-bullet"></div>
+            <div class="sv-item-text">
+              <div class="sv-item-title">Aktivno ponavljanje</div>
+              <div class="sv-item-desc">
+                Testiraj sebe umjesto da samo čitaš.
+              </div>
+              <ul class="sv-sub-items">
+                <li class="sv-sub-item">
+                  <div class="sv-sub-bullet"></div>
+                  <div class="sv-sub-item-text">
+                    <strong>Flashcards</strong> — pitanje s jedne, odgovor s
+                    druge strane
+                  </div>
+                </li>
+                <li class="sv-sub-item">
+                  <div class="sv-sub-bullet"></div>
+                  <div class="sv-sub-item-text">
+                    <strong>Rješavaj stare testove</strong> — najbolja
+                    simulacija prijemnog
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="sv-item">
+            <div class="sv-bullet"></div>
+            <div class="sv-item-text">
+              <div class="sv-item-title">Mind mape</div>
+              <div class="sv-item-desc">
+                Vizualizuj veze između pojmova za bolje razumijevanje.
+              </div>
+            </div>
+          </div>
+          <div class="sv-item">
+            <div class="sv-bullet"></div>
+            <div class="sv-item-text">
+              <div class="sv-item-title">Uči u grupama</div>
+              <div class="sv-item-desc">
+                Objašnjavanje drugima je najbrži način da provjeriš znanje.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sv-group">
+        <div class="sv-group-header">
+          <div class="sv-icon"><i class="ti ti-heart"></i></div>
+          <div>
+            <div class="sv-group-title">Briga o sebi</div>
+            <div class="sv-group-sub">Zdravlje i koncentracija</div>
+          </div>
+          <span class="sv-badge">2 savjeta</span>
+        </div>
+        <div class="sv-items">
+          <div class="sv-item">
+            <div class="sv-bullet"></div>
+            <div class="sv-item-text">
+              <div class="sv-item-title">San i odmor</div>
+              <div class="sv-item-desc">
+                Mozak konsoliduje znanje tokom sna — minimum 7–8 sati.
+              </div>
+              <ul class="sv-sub-items">
+                <li class="sv-sub-item">
+                  <div class="sv-sub-bullet"></div>
+                  <div class="sv-sub-item-text">
+                    <strong>Ne uči do kasno</strong> — umor smanjuje efikasnost
+                    za 40%
+                  </div>
+                </li>
+                <li class="sv-sub-item">
+                  <div class="sv-sub-bullet"></div>
+                  <div class="sv-sub-item-text">
+                    <strong>Kratki drijemež</strong> (20 min) poboljšava
+                    memoriju
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="sv-item">
+            <div class="sv-bullet"></div>
+            <div class="sv-item-text">
+              <div class="sv-item-title">Fizička aktivnost</div>
+              <div class="sv-item-desc">
+                30 minuta kretanja dnevno poboljšava fokus i pamćenje.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="tbl-section">
+      <div class="tbl-inner">
+        <div class="tbl-header">
+          <div class="tbl-tag">Pregled predmeta</div>
+          <h2>Svih 10 predmeta — oba semestra</h2>
+          <p>
+            Tabela sa svim predmetima, semestrom, težinom i savjetima za pristup
+            učenju.
+          </p>
+        </div>
+        <div class="tbl-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Predmet</th>
+                <th>Semestar</th>
+                <th>Težina</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>01</td>
+                <td>Matematika 1</td>
+                <td><span class="sem-badge sem1">Sem. 1</span></td>
+                <td><span class="diff-dot d3">Visoka</span></td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>Fizika 1</td>
+                <td><span class="sem-badge sem1">Sem. 1</span></td>
+                <td><span class="diff-dot d3">Visoka</span></td>
+              </tr>
+              <tr>
+                <td>03</td>
+                <td>Osnove elektrotehnike 1</td>
+                <td><span class="sem-badge sem1">Sem. 1</span></td>
+                <td><span class="diff-dot d2">Srednja</span></td>
+              </tr>
+              <tr>
+                <td>04</td>
+                <td>Osnove računarstva</td>
+                <td><span class="sem-badge sem1">Sem. 1</span></td>
+                <td><span class="diff-dot d1">Laka</span></td>
+              </tr>
+              <tr>
+                <td>05</td>
+                <td>Uvod u energetske sisteme</td>
+                <td><span class="sem-badge sem1">Sem. 1</span></td>
+                <td><span class="diff-dot d1">Laka</span></td>
+              </tr>
+              <tr>
+                <td>06</td>
+                <td>Matematika 2</td>
+                <td><span class="sem-badge sem2">Sem. 2</span></td>
+                <td><span class="diff-dot d3">Visoka</span></td>
+              </tr>
+              <tr>
+                <td>07</td>
+                <td>Fizika 2</td>
+                <td><span class="sem-badge sem2">Sem. 2</span></td>
+                <td><span class="diff-dot d3">Visoka</span></td>
+              </tr>
+              <tr>
+                <td>08</td>
+                <td>Osnove elektrotehnike 2</td>
+                <td><span class="sem-badge sem2">Sem. 2</span></td>
+                <td><span class="diff-dot d2">Srednja</span></td>
+              </tr>
+              <tr>
+                <td>09</td>
+                <td>Osnove programiranja</td>
+                <td><span class="sem-badge sem2">Sem. 2</span></td>
+                <td><span class="diff-dot d2">Srednja</span></td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>Tehnike za podršku tehničkom pisanju</td>
+                <td><span class="sem-badge sem2">Sem. 2</span></td>
+                <td><span class="diff-dot d1">Laka</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="pred-section">
+      <div class="pred-header">
+        <div class="pred-tag">Savjeti po predmetima</div>
+        <h2>Specifični savjeti za svaki predmet</h2>
+        <p>Savjeti koji su nam pomogli — za buduće generacije.</p>
+      </div>
+
+      <div class="sem-title">Semestar 1</div>
+      <div class="pred-grid">
+        <div class="pred-card">
+          <div class="pred-card-icon"><i class="ti ti-math"></i></div>
+          <h3>Matematika 1</h3>
+          <p class="pred-placeholder">Dodajte savjete za ovaj predmet</p>
+          <div class="pred-card-footer">Semestar 1 · Obavezni</div>
+        </div>
+        <div class="pred-card">
+          <div class="pred-card-icon"><i class="ti ti-atom"></i></div>
+          <h3>Fizika 1</h3>
+          <p class="pred-placeholder">Dodajte savjete za ovaj predmet</p>
+          <div class="pred-card-footer">Semestar 1 · Obavezni</div>
+        </div>
+        <div class="pred-card">
+          <div class="pred-card-icon"><i class="ti ti-bolt"></i></div>
+          <h3>Osnove elektrotehnike 1</h3>
+          <p class="pred-placeholder">Dodajte savjete za ovaj predmet</p>
+          <div class="pred-card-footer">Semestar 1 · Obavezni</div>
+        </div>
+        <div class="pred-card">
+          <div class="pred-card-icon"><i class="ti ti-cpu"></i></div>
+          <h3>Osnove računarstva</h3>
+          <p class="pred-placeholder">Dodajte savjete za ovaj predmet</p>
+          <div class="pred-card-footer">Semestar 1 · Obavezni</div>
+        </div>
+        <div class="pred-card">
+          <div class="pred-card-icon"><i class="ti ti-plug"></i></div>
+          <h3>Uvod u energetske sisteme</h3>
+          <p class="pred-placeholder">Dodajte savjete za ovaj predmet</p>
+          <div class="pred-card-footer">Semestar 1 · Obavezni</div>
+        </div>
+      </div>
+
+      <div class="sem-title sem-title-2">Semestar 2</div>
+      <div class="pred-grid">
+        <div class="pred-card">
+          <div class="pred-card-icon"><i class="ti ti-math"></i></div>
+          <h3>Matematika 2</h3>
+          <p class="pred-placeholder">Dodajte savjete za ovaj predmet</p>
+          <div class="pred-card-footer">Semestar 2 · Obavezni</div>
+        </div>
+        <div class="pred-card">
+          <div class="pred-card-icon"><i class="ti ti-atom"></i></div>
+          <h3>Fizika 2</h3>
+          <p class="pred-placeholder">Dodajte savjete za ovaj predmet</p>
+          <div class="pred-card-footer">Semestar 2 · Obavezni</div>
+        </div>
+        <div class="pred-card">
+          <div class="pred-card-icon"><i class="ti ti-bolt"></i></div>
+          <h3>Osnove elektrotehnike 2</h3>
+          <p class="pred-placeholder">Dodajte savjete za ovaj predmet</p>
+          <div class="pred-card-footer">Semestar 2 · Obavezni</div>
+        </div>
+        <div class="pred-card">
+          <div class="pred-card-icon"><i class="ti ti-code"></i></div>
+          <h3>Osnove programiranja</h3>
+          <p class="pred-placeholder">Dodajte savjete za ovaj predmet</p>
+          <div class="pred-card-footer">Semestar 2 · Obavezni</div>
+        </div>
+        <div class="pred-card">
+          <div class="pred-card-icon"><i class="ti ti-pencil"></i></div>
+          <h3>Tehnike za podršku tehničkom pisanju</h3>
+          <p class="pred-placeholder">Dodajte savjete za ovaj predmet</p>
+          <div class="pred-card-footer">Semestar 2 · Obavezni</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="res-section">
+      <div class="res-inner">
+        <div class="res-header">
+          <div class="res-tag">Korisni resursi</div>
+          <h2>Preporučeni materijali po predmetima</h2>
+          <p>
+            Knjige, YouTube kanali, sajtovi i alati koji olakšavaju učenje
+            svakog predmeta.
+          </p>
+        </div>
+        <div class="res-grid">
+          <div class="res-card">
+            <div class="res-card-top">
+              <div class="res-card-icon"><i class="ti ti-math"></i></div>
+              <div>
+                <h3>Matematika 1 &amp; 2</h3>
+                <div class="res-card-sub">Analiza i algebra</div>
+              </div>
+            </div>
+            <ul class="res-list">
+              <li>Dodajte preporučenu knjigu</li>
+              <li>Dodajte YouTube kanal ili sajt</li>
+              <li>Dodajte još jedan resurs</li>
+            </ul>
+          </div>
+          <div class="res-card">
+            <div class="res-card-top">
+              <div class="res-card-icon"><i class="ti ti-atom"></i></div>
+              <div>
+                <h3>Fizika 1 &amp; 2</h3>
+                <div class="res-card-sub">Mehanika i elektromagnetizam</div>
+              </div>
+            </div>
+            <ul class="res-list">
+              <li>Dodajte preporučenu knjigu</li>
+              <li>Dodajte YouTube kanal ili sajt</li>
+              <li>Dodajte još jedan resurs</li>
+            </ul>
+          </div>
+          <div class="res-card">
+            <div class="res-card-top">
+              <div class="res-card-icon"><i class="ti ti-bolt"></i></div>
+              <div>
+                <h3>Osnove elektrotehnike</h3>
+                <div class="res-card-sub">Semestar 1 i 2</div>
+              </div>
+            </div>
+            <ul class="res-list">
+              <li>Dodajte preporučenu knjigu</li>
+              <li>Dodajte YouTube kanal ili sajt</li>
+              <li>Dodajte još jedan resurs</li>
+            </ul>
+          </div>
+          <div class="res-card">
+            <div class="res-card-top">
+              <div class="res-card-icon"><i class="ti ti-cpu"></i></div>
+              <div>
+                <h3>Osnove računarstva</h3>
+                <div class="res-card-sub">Arhitektura i logika</div>
+              </div>
+            </div>
+            <ul class="res-list">
+              <li>Dodajte preporučenu knjigu</li>
+              <li>Dodajte YouTube kanal ili sajt</li>
+              <li>Dodajte još jedan resurs</li>
+            </ul>
+          </div>
+          <div class="res-card">
+            <div class="res-card-top">
+              <div class="res-card-icon"><i class="ti ti-code"></i></div>
+              <div>
+                <h3>Osnove programiranja</h3>
+                <div class="res-card-sub">Algoritmi i kod</div>
+              </div>
+            </div>
+            <ul class="res-list">
+              <li>Dodajte preporučenu knjigu</li>
+              <li>Dodajte YouTube kanal ili sajt</li>
+              <li>Dodajte još jedan resurs</li>
+            </ul>
+          </div>
+          <div class="res-card">
+            <div class="res-card-top">
+              <div class="res-card-icon"><i class="ti ti-pencil"></i></div>
+              <div>
+                <h3>Tehničko pisanje</h3>
+                <div class="res-card-sub">Izvještaji i dokumentacija</div>
+              </div>
+            </div>
+            <ul class="res-list">
+              <li>Dodajte preporučenu knjigu</li>
+              <li>Dodajte YouTube kanal ili sajt</li>
+              <li>Dodajte još jedan resurs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="upper">
+        <div class="authors">
+          <h3>Autori</h3>
+          <div class="author">
+            <div class="icon"><i class="fa-solid fa-user-gear"></i></div>
+            <p>Aida Halilčević</p>
+          </div>
+          <div class="author">
+            <div class="icon"><i class="fa-solid fa-user-gear"></i></div>
+            <p>Ahmed Mahmutović</p>
+          </div>
+          <div class="author">
+            <div class="icon"><i class="fa-solid fa-user-gear"></i></div>
+            <p>Ahmed Selimbašić</p>
+          </div>
+        </div>
+        <div class="contact">
+          <h3>Kontakt</h3>
+          <div class="mail">
+            <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+            <p>aida.halilcevic@fet.ba</p>
+          </div>
+          <div class="mail">
+            <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+            <p>ahmed.mahmutovic@fet.ba</p>
+          </div>
+          <div class="mail">
+            <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+            <p>ahmed.selimbasic@fet.ba</p>
+          </div>
+        </div>
+        <div class="meni">
+          <h3>Meni</h3>
+          <a href="index.html" class="active">Početna</a>
+          <a href="materijali.html">Materijali</a>
+          <a href="savjeti">Savjeti</a>
+          <a href="kontakt.html">Kontakt</a>
+        </div>
+      </div>
+      <div class="lower">&copy;FETHub 2026</div>
+    </footer>
+    <script src="javascript/main.js"></script>
+  </body>
+</html>
