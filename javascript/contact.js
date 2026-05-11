@@ -1,6 +1,6 @@
 // ================== EMAIL JS INIT ==================
 
-emailjs.init("Phy4KH7uwmY394MMi");
+emailjs.init("Phy4KH7uwmY394MMi"); // VAŠ EMAILJS USER ID
 
 // ================== FORM ==================
 
@@ -23,8 +23,8 @@ form.addEventListener("submit", function (e) {
   // SLANJE MAILA
   emailjs
     .sendForm(
-      "service_v6ymm2n",
-      "template_d5df8m8 ",
+      "service_v6ymm2n", // VAŠ EMAILJS SERVICE ID
+      "template_d5df8m8 ", // VAŠ EMAILJS TEMPLATE ID
       form
     )
     .then(() => {
