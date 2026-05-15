@@ -31,8 +31,7 @@
       </div>
       <nav id="menu">
         <a href="index.html" class="active">Početna</a>
-        <a href="materijali.html">Materijali</a>
-        <a href="savjeti.html">Savjeti</a>
+        <a href="sadrzaj.html">Savjeti i materijali</a>
         <a href="kontakt.html">Kontakt</a>
         <button class="theme"><i class="fa-solid fa-moon"></i></button>
         <a href="#"><button class="gitrepo">Git</button></a>
@@ -63,7 +62,9 @@
             <p>
               Nudimo vam savjete za prijemni ispit i uspješno očišćenu godinu
             </p>
-            <a href="savjeti.html"><button class="servicebutton">Savjeti</button></a>
+            <a href="sadrzaj.html#savjeti"
+              ><button class="servicebutton">Savjeti</button></a
+            >
           </div>
         </div>
         <div class="card card2">
@@ -71,7 +72,9 @@
           <div class="info">
             <h3>Materijali</h3>
             <p>Svi potrebni materijali na jednom mjestu</p>
-            <a href="materijali.html"><button class="servicebutton">Materijali</button></a>
+            <a href="sadrzaj.html#materijali"
+              ><button class="servicebutton">Materijali</button></a
+            >
           </div>
         </div>
         <div class="card card3">
@@ -354,8 +357,7 @@
         <div class="meni">
           <h3>Meni</h3>
           <a href="index.html" class="active">Početna</a>
-          <a href="materijali.html">Materijali</a>
-          <a href="savjeti.html">Savjeti</a>
+          <a href="sadrzaj.html">Savjeti i materijali</a>
           <a href="kontakt.html">Kontakt</a>
         </div>
       </div>
@@ -366,23 +368,29 @@
     <script src="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/script.js"></script>
     <script src="javascript/main.js" defer></script>
     <script>
-  function pad(n) { return String(Math.floor(n)).padStart(2, '0'); }
-  function tick() {
-    var target = new Date('2026-11-01T00:00:00');
-    var diff = target - new Date();
-    if (diff <= 0) {
-      ['tc-d','tc-h','tc-m','tc-s'].forEach(id => document.getElementById(id).textContent = '00');
-      document.querySelector('.timer-sub').textContent = 'Semestar je počeo!';
-      return;
-    }
-    document.getElementById('tc-d').textContent = pad(diff / 864e5);
-    document.getElementById('tc-h').textContent = pad((diff % 864e5) / 36e5);
-    document.getElementById('tc-m').textContent = pad((diff % 36e5) / 6e4);
-    document.getElementById('tc-s').textContent = pad((diff % 6e4) / 1e3);
-  }
-  tick();
-  setInterval(tick, 1000);
-</script>
-
+      function pad(n) {
+        return String(Math.floor(n)).padStart(2, "0");
+      }
+      function tick() {
+        var target = new Date("2026-11-01T00:00:00");
+        var diff = target - new Date();
+        if (diff <= 0) {
+          ["tc-d", "tc-h", "tc-m", "tc-s"].forEach(
+            (id) => (document.getElementById(id).textContent = "00"),
+          );
+          document.querySelector(".timer-sub").textContent =
+            "Semestar je počeo!";
+          return;
+        }
+        document.getElementById("tc-d").textContent = pad(diff / 864e5);
+        document.getElementById("tc-h").textContent = pad(
+          (diff % 864e5) / 36e5,
+        );
+        document.getElementById("tc-m").textContent = pad((diff % 36e5) / 6e4);
+        document.getElementById("tc-s").textContent = pad((diff % 6e4) / 1e3);
+      }
+      tick();
+      setInterval(tick, 1000);
+    </script>
   </body>
 </html>
