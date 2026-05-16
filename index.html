@@ -32,7 +32,7 @@
       <nav id="menu">
         <a href="index.html" class="active">Početna</a>
         <a href="materijali.html">Materijali</a>
-        <a href="savjeti">Savjeti</a>
+        <a href="savjeti.html">Savjeti</a>
         <a href="kontakt.html">Kontakt</a>
         <button class="theme"><i class="fa-solid fa-moon"></i></button>
         <a href="#"><button class="gitrepo">Git</button></a>
@@ -82,6 +82,33 @@
             <h3>O nama</h3>
             <p>Sve potrebne informacije o nama</p>
             <a href="#footer"><button class="servicebutton">O nama</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="timer-card">
+        <div class="icon-timer">
+          <i class="ti ti-clock"></i>
+        </div>
+        <div class="timer-info">
+          <h3>Početak semestra</h3>
+          <p class="timer-sub">1. oktobar 2026.</p>
+          <div class="timer-grid">
+            <div class="timer-box">
+              <span class="timer-num" id="tc-d">--</span
+              ><span class="timer-label">Dana</span>
+            </div>
+            <div class="timer-box">
+              <span class="timer-num" id="tc-h">--</span
+              ><span class="timer-label">Sati</span>
+            </div>
+            <div class="timer-box">
+              <span class="timer-num" id="tc-m">--</span
+              ><span class="timer-label">Min</span>
+            </div>
+            <div class="timer-box">
+              <span class="timer-num" id="tc-s">--</span
+              ><span class="timer-label">Sek</span>
+            </div>
           </div>
         </div>
       </div>
@@ -330,7 +357,7 @@
           <h3>Meni</h3>
           <a href="index.html" class="active">Početna</a>
           <a href="materijali.html">Materijali</a>
-          <a href="savjeti">Savjeti</a>
+          <a href="savjeti.html">Savjeti</a>
           <a href="kontakt.html">Kontakt</a>
         </div>
       </div>
@@ -340,5 +367,24 @@
     <script src="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/script.js"></script>
     <script src="javascript/main.js" defer></script>
+    <script>
+  function pad(n) { return String(Math.floor(n)).padStart(2, '0'); }
+  function tick() {
+    var target = new Date('2026-11-01T00:00:00');
+    var diff = target - new Date();
+    if (diff <= 0) {
+      ['tc-d','tc-h','tc-m','tc-s'].forEach(id => document.getElementById(id).textContent = '00');
+      document.querySelector('.timer-sub').textContent = 'Semestar je počeo!';
+      return;
+    }
+    document.getElementById('tc-d').textContent = pad(diff / 864e5);
+    document.getElementById('tc-h').textContent = pad((diff % 864e5) / 36e5);
+    document.getElementById('tc-m').textContent = pad((diff % 36e5) / 6e4);
+    document.getElementById('tc-s').textContent = pad((diff % 6e4) / 1e3);
+  }
+  tick();
+  setInterval(tick, 1000);
+</script>
+
   </body>
 </html>

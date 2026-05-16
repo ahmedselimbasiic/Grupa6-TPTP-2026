@@ -31,7 +31,7 @@
       <nav id="menu">
         <a href="index.html">Početna</a>
         <a href="materijali.html">Materijali</a>
-        <a href="savjeti">Savjeti</a>
+        <a href="savjeti.html">Savjeti</a>
         <a href="kontakt.html" class="active">Kontakt</a>
         <button class="theme"><i class="fa-solid fa-moon"></i></button>
         <a href="#"><button class="gitrepo">Git</button></a>
@@ -45,7 +45,7 @@
     <div class="contact-container">
       <div class="contact-box">
         <h2>Imate pitanje? Kontaktirajte nas!</h2>
-        <form action="#" method="post">
+        <form id="contact-form">
           <label for="ime">Ime:</label>
           <input
             type="text"
@@ -66,7 +66,7 @@
           />
           <label for="email">Email:</label>
           <input
-            type="email"
+            type="text"
             id="email"
             name="email"
             class="field"
@@ -144,6 +144,8 @@
       </div>
       <div class="lower">&copy;FETHub 2026</div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="javascript/main.js"></script>
+    <script src="javascript/contact.js"></script>
   </body>
 </html>
