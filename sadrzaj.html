@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="bs">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,12 +13,12 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css"
     />
-    <title>Savjeti</title>
+    <title>Savjeti i materijali</title>
   </head>
   <body>
     <header>
       <div class="logoimg">
-        <img src="slike/icon.png" alt="" />
+        <img src="slike/icon.png" alt="logo" />
       </div>
       <div class="logo-image">
         <img
@@ -31,11 +31,12 @@
       </div>
       <nav id="menu">
         <a href="index.html">Početna</a>
-        <a href="materijali.html">Materijali</a>
-        <a href="savjeti.html" class="active">Savjeti</a>
+        <a href="sadrzaj.html" class="active">Savjeti i materijali</a>
         <a href="kontakt.html">Kontakt</a>
         <button class="theme"><i class="fa-solid fa-moon"></i></button>
-        <a href="#"><button class="gitrepo">Git</button></a>
+        <a href="https://github.com/ahmedselimbasiic/Grupa6-TPTP-2026"
+          ><button class="gitrepo">Git</button></a
+        >
       </nav>
       <div class="hamburger" onclick="toggleMenu()">
         <span class="bar"></span>
@@ -43,7 +44,7 @@
         <span class="bar"></span>
       </div>
     </header>
-    <div class="hero-section">
+    <div class="heroo-section">
       <div class="description">
         <h1>
           Savjeti koji mogu <br />spasiti <span class="span">godinu!</span>
@@ -54,7 +55,7 @@
     <section class="sv-section">
       <div class="sv-header">
         <div class="sv-tag">Savjeti</div>
-        <h1>Kako se efikasno pripremiti</h1>
+        <h1 id="savjeti">Kako se efikasno pripremiti</h1>
         <p>
           Praktični savjeti podijeljeni po kategorijama — od organizacije do
           tehnike učenja.
@@ -151,7 +152,7 @@
                   <div class="sv-sub-bullet"></div>
                   <div class="sv-sub-item-text">
                     <strong>Rješavaj stare testove</strong> — najbolja
-                    simulacija prijemnog
+                    simulacija stvarnog ispita
                   </div>
                 </li>
               </ul>
@@ -324,31 +325,46 @@
         <div class="pred-card">
           <div class="pred-card-icon"><i class="ti ti-math"></i></div>
           <h3>Matematika 1</h3>
-          <p class="pred-placeholder">Dodajte savjete za ovaj predmet</p>
+          <p class="pred-placeholder">
+            Budi konzistentan u rješavanju zadataka, jer stalna vježba gradi
+            čvrstu osnovu za Matematiku 2 i kasnije predmete.
+          </p>
           <div class="pred-card-footer">Semestar 1 · Obavezni</div>
         </div>
         <div class="pred-card">
           <div class="pred-card-icon"><i class="ti ti-atom"></i></div>
           <h3>Fizika 1</h3>
-          <p class="pred-placeholder">Dodajte savjete za ovaj predmet</p>
+          <p class="pred-placeholder">
+            Podijeli dugu lekciju na manje dijelove i uči ih redovno uz
+            rješavanje zadataka.
+          </p>
           <div class="pred-card-footer">Semestar 1 · Obavezni</div>
         </div>
         <div class="pred-card">
           <div class="pred-card-icon"><i class="ti ti-bolt"></i></div>
           <h3>Osnove elektrotehnike 1</h3>
-          <p class="pred-placeholder">Dodajte savjete za ovaj predmet</p>
+          <p class="pred-placeholder">
+            Crtaj skice i dijagrame (kola, grafove) — vizualizacija puno pomaže.
+          </p>
           <div class="pred-card-footer">Semestar 1 · Obavezni</div>
         </div>
         <div class="pred-card">
           <div class="pred-card-icon"><i class="ti ti-cpu"></i></div>
           <h3>Osnove računarstva</h3>
-          <p class="pred-placeholder">Dodajte savjete za ovaj predmet</p>
+          <p class="pred-placeholder">
+            Rješavaj zadatke redovno, kako bi se razvila preciznost i brzina za
+            ovaj tip zadataka.
+          </p>
           <div class="pred-card-footer">Semestar 1 · Obavezni</div>
         </div>
         <div class="pred-card">
           <div class="pred-card-icon"><i class="ti ti-plug"></i></div>
           <h3>Uvod u energetske sisteme</h3>
-          <p class="pred-placeholder">Dodajte savjete za ovaj predmet</p>
+          <p class="pred-placeholder">
+            Kod izvodjenja formula za entropiju ili crtanja procesa (izobara,
+            izohora), uvijek prvo napiši osnovne relacije i označi promjenljive
+            da lakše pratiš korake.
+          </p>
           <div class="pred-card-footer">Semestar 1 · Obavezni</div>
         </div>
       </div>
@@ -358,36 +374,140 @@
         <div class="pred-card">
           <div class="pred-card-icon"><i class="ti ti-math"></i></div>
           <h3>Matematika 2</h3>
-          <p class="pred-placeholder">Dodajte savjete za ovaj predmet</p>
+          <p class="pred-placeholder">
+            Redovno rješavaj zadatke nakon predavanja, jer se gradivo brzo
+            gomila.
+          </p>
           <div class="pred-card-footer">Semestar 2 · Obavezni</div>
         </div>
         <div class="pred-card">
           <div class="pred-card-icon"><i class="ti ti-atom"></i></div>
           <h3>Fizika 2</h3>
-          <p class="pred-placeholder">Dodajte savjete za ovaj predmet</p>
+          <p class="pred-placeholder">
+            Teme se nadovezuju, pa redovno ponavljanje i povezivanje pojmova
+            olakšava razumijevanje složenih tema.
+          </p>
           <div class="pred-card-footer">Semestar 2 · Obavezni</div>
         </div>
         <div class="pred-card">
           <div class="pred-card-icon"><i class="ti ti-bolt"></i></div>
           <h3>Osnove elektrotehnike 2</h3>
-          <p class="pred-placeholder">Dodajte savjete za ovaj predmet</p>
+          <p class="pred-placeholder">
+            Djeluje komplikovano ali ako si u OE1 izgradio čvrstu osnovu, u OE2
+            ćeš lako razumjeti složenije zadatke i primjene.
+          </p>
           <div class="pred-card-footer">Semestar 2 · Obavezni</div>
         </div>
         <div class="pred-card">
           <div class="pred-card-icon"><i class="ti ti-code"></i></div>
           <h3>Osnove programiranja</h3>
-          <p class="pred-placeholder">Dodajte savjete za ovaj predmet</p>
+          <p class="pred-placeholder">
+            Pošto se iste strukture i logika stalno ponavljaju kroz različite
+            zadatke, važno je da ih uvježbaš kroz što više primjera.
+          </p>
           <div class="pred-card-footer">Semestar 2 · Obavezni</div>
         </div>
         <div class="pred-card">
           <div class="pred-card-icon"><i class="ti ti-pencil"></i></div>
-          <h3>Tehnike za podršku tehničkom pisanju</h3>
-          <p class="pred-placeholder">Dodajte savjete za ovaj predmet</p>
+          <h3>Tehnologije za podršku tehničkom pisanju</h3>
+          <p class="pred-placeholder">
+            Vježbaj kroz praktične primjere, jer se tako najlakše pamte obrasci
+            iz tehnologija za oblikovanje dokumenata i sadržaja.
+          </p>
           <div class="pred-card-footer">Semestar 2 · Obavezni</div>
         </div>
       </div>
     </section>
-
+    <div class="prijemni">
+      <div class="container">
+        <div class="pj-left">
+          <span class="pj-tag">Prijemni ispit</span>
+          <h2>Sve što trebaš<br />za prijemni — na jednom mjestu</h2>
+          <p>
+            Testovi iz prethodnih godina, zbirke zadataka,<br />skripte i
+            savjeti — besplatno za preuzimanje.
+          </p>
+          <div class="pj-stats">
+            <div class="pj-stat">
+              <div class="pj-stat-num">50+</div>
+              <div class="pj-stat-label">Testova</div>
+            </div>
+            <div class="pj-divider"></div>
+            <div class="pj-stat">
+              <div class="pj-stat-num">PDF</div>
+              <div class="pj-stat-label">Format</div>
+            </div>
+            <div class="pj-divider"></div>
+            <div class="pj-stat">
+              <div class="pj-stat-num">100%</div>
+              <div class="pj-stat-label">Besplatno</div>
+            </div>
+          </div>
+        </div>
+        <div class="pj-right">
+          <div class="pj-card">
+            <i class="ti ti-file-text"></i>
+            <div class="pj-card-text">
+              <strong>Zbirke zadataka</strong>
+              Matematika
+            </div>
+          </div>
+          <div class="pj-card">
+            <i class="ti ti-award"></i>
+            <div class="pj-card-text">
+              <strong>Prijemni testovi</strong>
+              Prethodnih godina
+            </div>
+          </div>
+          <div class="pj-card">
+            <i class="ti ti-bulb"></i>
+            <div class="pj-card-text">
+              <strong>Savjeti i skripte</strong>
+              Za brzu pripremu
+            </div>
+          </div>
+          <a href="download/Prijemni.zip" download="Materijali za prijemni">
+            <button class="pj-btn">
+              <i class="ti ti-download"></i> Preuzmi materijale
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="materijali">
+      <h1 id="materijali">
+        Svi materijali na <br /><span class="spann">jednom mjestu</span>
+      </h1>
+      <div class="container">
+        <div class="card">
+          <span class="step-badge">Korak 01</span>
+          <div class="step-num">01</div>
+          <h3>Skripte za završne</h3>
+          <p>Olakšajte pripremu završnih ispita</p>
+        </div>
+        <div class="card">
+          <span class="step-badge">Korak 02</span>
+          <div class="step-num">02</div>
+          <h3>Rokovi</h3>
+          <p>Prijemni i ispitni rokovi</p>
+        </div>
+        <div class="card">
+          <span class="step-badge">Korak 03</span>
+          <div class="step-num">03</div>
+          <h3>Knjige i zbirke</h3>
+          <p>Sve na jednom mjestu u PDF-u</p>
+        </div>
+        <div class="card">
+          <span class="step-badge">Korak 04</span>
+          <div class="step-num">04</div>
+          <h3>Kvizovi i pitalice</h3>
+          <p>Zabavno učenje</p>
+        </div>
+        <a href="download/Materijali.zip" download="Materijali">
+          <button>Preuzmi materijale</button>
+        </a>
+      </div>
+    </div>
     <section class="res-section">
       <div class="res-inner">
         <div class="res-header">
@@ -408,9 +528,14 @@
               </div>
             </div>
             <ul class="res-list">
-              <li>Dodajte preporučenu knjigu</li>
-              <li>Dodajte YouTube kanal ili sajt</li>
-              <li>Dodajte još jedan resurs</li>
+              <li>
+                Za različite oblasti
+                <a href="https://www.wolframalpha.com/">wolframalpha</a>
+              </li>
+              <li>Grafovi<a href="https://www.geogebra.org/">geogebra</a></li>
+              <li>
+                <a href="https://tutorial.math.lamar.edu/">paulsonlinenotes</a>
+              </li>
             </ul>
           </div>
           <div class="res-card">
@@ -422,9 +547,15 @@
               </div>
             </div>
             <ul class="res-list">
-              <li>Dodajte preporučenu knjigu</li>
-              <li>Dodajte YouTube kanal ili sajt</li>
-              <li>Dodajte još jedan resurs</li>
+              <li>
+                Zadaci i simulacije
+                <a href="https://www.physicsclassroom.com/">physicsclassroom</a>
+              </li>
+              <li>
+                Za pravljenje flashcards<a href="https://www.brainscape.com/"
+                  >brainscape</a
+                >
+              </li>
             </ul>
           </div>
           <div class="res-card">
@@ -436,9 +567,13 @@
               </div>
             </div>
             <ul class="res-list">
-              <li>Dodajte preporučenu knjigu</li>
-              <li>Dodajte YouTube kanal ili sajt</li>
-              <li>Dodajte još jedan resurs</li>
+              <li>
+                Interaktivna elektronika
+                <a href="https://everycircuit.com/">everycircuit</a>
+              </li>
+              <li>
+                <a href="http://www.youtube.com/@AdisANukic">AdisANukic</a>
+              </li>
             </ul>
           </div>
           <div class="res-card">
@@ -450,9 +585,19 @@
               </div>
             </div>
             <ul class="res-list">
-              <li>Dodajte preporučenu knjigu</li>
-              <li>Dodajte YouTube kanal ili sajt</li>
-              <li>Dodajte još jedan resurs</li>
+              <li>
+                Zabavno učenje<a href="https://nandgame.com/">nandgame</a>
+              </li>
+              <li>
+                Karnaughove mape
+                <a href="https://www.boolean-algebra.com/kmap/">kmap</a>
+              </li>
+              <li>
+                Konverzije
+                <a href="https://www.binaryhexconverter.com/"
+                  >binaryhexconverter</a
+                >
+              </li>
             </ul>
           </div>
           <div class="res-card">
@@ -464,9 +609,15 @@
               </div>
             </div>
             <ul class="res-list">
-              <li>Dodajte preporučenu knjigu</li>
-              <li>Dodajte YouTube kanal ili sajt</li>
-              <li>Dodajte još jedan resurs</li>
+              <li>
+                Zbirka riješenih zadataka iz C programskog jezika - Nermin
+                Sarajlić
+              </li>
+              <li>
+                C++ reference i primjeri<a href="https://cppreference.com/"
+                  >cppreference</a
+                >
+              </li>
             </ul>
           </div>
           <div class="res-card">
@@ -478,15 +629,19 @@
               </div>
             </div>
             <ul class="res-list">
-              <li>Dodajte preporučenu knjigu</li>
-              <li>Dodajte YouTube kanal ili sajt</li>
-              <li>Dodajte još jedan resurs</li>
+              <li>
+                LaTeX editor<a href="https://www.overleaf.com/">overleaf</a>
+              </li>
+              <li>
+                HTML,CSS,JavaScript<a href="https://www.w3schools.com/"
+                  >w3schools</a
+                >
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </section>
-
     <footer id="footer">
       <div class="upper">
         <div class="authors">
@@ -521,14 +676,14 @@
         </div>
         <div class="meni">
           <h3>Meni</h3>
-          <a href="index.html" class="active">Početna</a>
-          <a href="materijali.html">Materijali</a>
-          <a href="savjeti">Savjeti</a>
+          <a href="index.html">Početna</a>
+          <a href="sadrzaj.html" class="active">Savjeti i materijali</a>
           <a href="kontakt.html">Kontakt</a>
         </div>
       </div>
       <div class="lower">&copy;FETHub 2026</div>
     </footer>
     <script src="javascript/main.js"></script>
+    <script src="javascript/animations.js" defer></script>
   </body>
 </html>

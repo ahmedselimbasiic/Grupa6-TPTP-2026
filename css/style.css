@@ -137,7 +137,10 @@ nav a.active {
   align-items: center;
   gap: 5px;
   padding: 10px;
-  z-index: 1100;
+  position: relative;
+  z-index: 1101;
+  flex-shrink: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .bar {
@@ -151,6 +154,9 @@ nav a.active {
 
 @media (max-width: 1050px) {
   .logo-image {
+    display: none;
+  }
+  .logo-image-black {
     display: none;
   }
   .logoimg {
@@ -199,6 +205,19 @@ nav a.active {
     right: 0;
   }
 
+  body:has(nav.active) {
+    overflow: hidden;
+  }
+
+  header:has(nav.active)::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1040;
+    pointer-events: none;
+  }
+
   .button {
     display: none;
   }
@@ -206,6 +225,11 @@ nav a.active {
   .hamburger {
     display: flex;
     margin-left: auto;
+    position: fixed;
+    top: 18px;
+    right: 40px;
+    z-index: 1101;
+    background-color: transparent;
   }
 
   .hamburger:hover .bar {
@@ -218,14 +242,49 @@ nav a.active {
     top: 0;
     z-index: 2000;
   }
+
+  nav > * {
+    align-self: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  nav .theme {
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav a {
+    text-align: center;
+    width: auto;
+    display: block;
+  }
+
+  nav > a:has(.gitrepo) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav .gitrepo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav a.active {
+    border-bottom: 2px solid var(--primarycolor);
+    padding-bottom: 4px;
+  }
 }
 
 /*Hero sekcija*/
 .hero-section {
   margin: 15px;
   height: 70vh;
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
     url(../slike/FET-scaled.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -522,9 +581,7 @@ nav a.active {
   background: #ffffff;
   border: 1px solid rgba(80, 209, 186, 0.2);
   overflow: hidden;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
@@ -641,9 +698,7 @@ nav a.active {
   height: 8px;
   opacity: 1;
   border-radius: 4px;
-  transition:
-    width 0.2s,
-    background 0.2s;
+  transition: width 0.2s, background 0.2s;
 }
 
 .swiper-pagination-bullet-active {
@@ -734,37 +789,18 @@ summary {
 details[open] summary {
   color: white;
 }
-summary .icon {
-  width: 32px;
-  height: 32px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s;
+summary .faq-icon {
+  flex-shrink: 0;
+  font-size: 1rem;
+  color: var(--primarycolor);
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
 }
 
-summary .icon::before {
-  content: "";
-  width: 8px;
-  height: 8px;
-  border-right: 2px solid #223231;
-  border-bottom: 2px solid #223231;
-  transform: rotate(45deg);
-  margin-bottom: 4px;
-  transition: all 0.3s;
-}
-details[open] .icon {
-  background-color: white;
-  border-color: white;
-}
-
-details[open] .icon::before {
-  transform: rotate(-135deg);
-  margin-bottom: -4px;
-  border-color: #066a52;
+details[open] summary .faq-icon {
+  transform: rotate(180deg);
+  color: #ffffff;
 }
 .content {
   padding: 0 30px 25px 30px;
@@ -972,10 +1008,20 @@ footer .lower {
   width: 30vw;
 }
 .finalsection .container .image {
-  background-image: url(../slike/young-students-watching-laptop.jpg);
-  background-size: cover;
-  padding: 20px;
+  padding: 0;
+  overflow: hidden;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
+
+.finalsection-map-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+}
+
 .finalsection .container .info {
   display: flex;
   flex-direction: column;
@@ -1033,6 +1079,10 @@ footer .lower {
     border-radius: 20px 20px 0 0;
   }
 
+  .finalsection-map-img {
+    border-radius: 20px 20px 0 0;
+  }
+
   .finalsection .container .info {
     border-radius: 0 0 20px 20px;
     padding: 40px 25px;
@@ -1068,8 +1118,17 @@ body.dark-mode .logo-image {
 }
 body.dark-mode .logo-image-black {
   display: flex;
+  width: 250px;
+  height: 70px;
   align-items: center;
   justify-content: center;
+}
+
+body.dark-mode .logo-image-black img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
 }
 body.dark-mode header {
   background-color: #1e1e1e;
@@ -1080,13 +1139,13 @@ body.dark-mode header .gitrepo {
 body.dark-mode nav a {
   color: #ffffff;
 }
-body.dark-mode nav button {
+body.dark-mode nav .theme {
   background-color: white;
   color: #1e1e1e;
 }
-body.dark-mode nav button:hover {
-  background-color: #1e1e1e;
-  color: white;
+body.dark-mode nav .theme:hover {
+  background-color: var(--secondarycolor);
+  color: #1e1e1e;
 }
 body.dark-mode nav a:hover,
 body.dark-mode nav a.active {
@@ -1159,6 +1218,113 @@ body.dark-mode .materijali h1 {
 body.dark-mode .materijali .spann {
   color: white;
 }
+body.dark-mode .heroo-section {
+  background-color: #1e1e1e;
+}
+body.dark-mode .sv-header h1,
+body.dark-mode .pred-header h2,
+body.dark-mode .res-header h2,
+body.dark-mode .materijali h1 {
+  color: #ffffff;
+}
+body.dark-mode .sv-header p,
+body.dark-mode .pred-header p,
+body.dark-mode .res-header p {
+  color: #cccccc;
+}
+body.dark-mode .sv-group,
+body.dark-mode .pred-card,
+body.dark-mode .res-card {
+  background-color: #2a2a2a;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+body.dark-mode .sv-group-title,
+body.dark-mode .sv-item-title,
+body.dark-mode .pred-card h3,
+body.dark-mode .res-card h3 {
+  color: #ffffff;
+}
+body.dark-mode .sv-group-sub,
+body.dark-mode .sv-item-desc,
+body.dark-mode .pred-placeholder,
+body.dark-mode .res-card-sub {
+  color: #b0b0b0;
+}
+body.dark-mode .faq {
+  background-color: #1e1e1e;
+}
+body.dark-mode .faqforum details {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+body.dark-mode .faqforum summary {
+  color: #ffffff;
+}
+
+body.dark-mode summary .faq-icon {
+  color: var(--secondarycolor);
+}
+
+/* Mobile nav + dark mode */
+@media (max-width: 1200px) {
+  body.dark-mode nav {
+    background-color: #252525;
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: -6px 0 28px rgba(0, 0, 0, 0.5);
+  }
+
+  body.dark-mode nav a.active {
+    border-bottom-color: var(--secondarycolor);
+  }
+
+  body.dark-mode nav > * {
+    align-self: center;
+  }
+
+  body.dark-mode .hamburger .bar {
+    background-color: var(--secondarycolor);
+  }
+
+  body.dark-mode header .gitrepo {
+    background-color: transparent;
+    border: 2px solid var(--secondarycolor);
+    color: var(--secondarycolor);
+  }
+
+  body.dark-mode header .gitrepo:hover {
+    background-color: var(--secondarycolor);
+    color: #1e1e1e;
+  }
+
+  body.dark-mode header:has(nav.active)::before {
+    background: rgba(0, 0, 0, 0.65);
+  }
+
+  body.dark-mode .hamburger.is-active .bar {
+    background-color: var(--secondarycolor);
+  }
+}
+
+@media (max-width: 1050px) {
+  body.dark-mode .logoimg {
+    display: none;
+  }
+  body.dark-mode .logoimg {
+    display: block;
+  }
+  body.dark-mode .logo-image-black {
+    display: none;
+    width: 80px;
+    height: 50px;
+    cursor: pointer;
+  }
+
+  body.dark-mode .logo-image-black img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 .contact-container {
   width: 100%;
   min-height: 100vh;
@@ -1308,8 +1474,7 @@ textarea.field {
 .hero-section-materials {
   margin: 15px;
   height: 70vh;
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
     url(../slike/materijali.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -1946,6 +2111,7 @@ textarea.field {
   color: #fff;
   margin-bottom: 0.5rem;
   line-height: 1.2;
+  text-align: left;
 }
 
 .tbl-header p {
@@ -2072,13 +2238,13 @@ tr:hover td {
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
-
 .pred-header h2 {
   font-family: "Lato", sans-serif;
   font-size: 2rem;
   font-weight: 900;
   line-height: 1.2;
   margin-bottom: 0.5rem;
+  text-align: left;
 }
 
 .pred-header p {
@@ -2209,6 +2375,7 @@ tr:hover td {
   font-weight: 900;
   color: #fff;
   margin-bottom: 0.5rem;
+  text-align: left;
 }
 
 .res-header p {
@@ -2285,6 +2452,13 @@ tr:hover td {
   font-size: 0.83rem;
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.5;
+}
+.res-list li a {
+  color: var(--secondarycolor);
+  font-style: italic;
+}
+.res-list li a:visited {
+  color: rgb(119, 244, 221);
 }
 
 .res-list li::before {
@@ -2409,6 +2583,7 @@ tr:hover td {
 }
 
 .timer-box {
+  font-family: "Lato", sans-serif;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   padding: 8px 14px;
@@ -2418,9 +2593,14 @@ tr:hover td {
   gap: 2px;
 }
 
-.timer-num {
+.timer-num,
+.timer-label {
   font-family: "Lato", sans-serif;
-  font-size: 1.8rem;
+  font-style: normal;
+}
+
+.timer-num {
+  font-size: 1.3rem;
   font-weight: 900;
   color: white;
   line-height: 1;
@@ -2428,12 +2608,17 @@ tr:hover td {
 }
 
 .timer-label {
-  font-family: "Lato", sans-serif;
   font-size: 9px;
   font-weight: 700;
   color: white;
   text-transform: uppercase;
   letter-spacing: 0.06em;
+}
+
+.service .timer-num,
+.service .timer-label {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
 }
 
 @media (max-width: 750px) {
@@ -2446,5 +2631,125 @@ tr:hover td {
   .timer-info {
     flex-direction: column;
     gap: 14px;
+  }
+}
+.heroo-section {
+  margin: 15px;
+  height: 70vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url(../slike/materijali.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--card-shadow);
+}
+.heroo-section .description {
+  width: 90vw;
+  text-align: center;
+  padding-bottom: 30px;
+}
+.heroo-section .description h1 {
+  font-size: 72px;
+  color: aliceblue;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.55);
+  margin-bottom: 0px;
+  line-height: 0.9;
+}
+.heroo-section .description p {
+  color: white;
+  font-size: 1.1rem;
+  font-family: "Lato", sans-serif;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.55);
+  margin-top: 15px;
+}
+.span {
+  font-family: "Playfair", serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 90px;
+}
+@media (max-width: 1200px) {
+  .heroo-section .description h1 {
+    font-size: 64px;
+  }
+  .span {
+    font-size: 80px;
+  }
+}
+@media (max-width: 1090px) {
+  .heroo-section .description h1 {
+    font-size: 52px;
+  }
+  .span {
+    font-size: 65px;
+  }
+}
+@media (max-width: 870px) {
+  .heroo-section .description {
+    width: 90vw;
+  }
+}
+
+/* Scroll & appear animations */
+[data-aos] {
+  opacity: 0;
+  transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--aos-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: none !important;
+}
+
+[data-aos="fade-up"] {
+  transform: translateY(36px);
+}
+
+[data-aos="fade-down"] {
+  transform: translateY(-24px);
+}
+
+[data-aos="fade-left"] {
+  transform: translateX(-40px);
+}
+
+[data-aos="fade-right"] {
+  transform: translateX(40px);
+}
+
+[data-aos="zoom-in"] {
+  transform: scale(0.92);
+}
+
+[data-aos="popout"] {
+  transform: scale(0.82);
+}
+
+[data-aos="popout-up"] {
+  transform: translateY(28px) scale(0.88);
+}
+
+[data-aos="popout"],
+[data-aos="popout-up"] {
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.75s cubic-bezier(0.34, 1.4, 0.64, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }

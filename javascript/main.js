@@ -15,8 +15,12 @@ function toggleMenu() {
 
 // ================== DARK MODE TOGGLE ==================
 
-// provjeravanje da li je dark mode bio sačuvan
-let darkmode = localStorage.getItem("darkmode") === "true";
+// spremljen izbor ima prednost; inače prati sistem (prefers-color-scheme)
+const savedTheme = localStorage.getItem("darkmode");
+let darkmode =
+  savedTheme !== null
+    ? savedTheme === "true"
+    : window.matchMedia("(prefers-color-scheme: dark)").matches;
 
 const themeButton = document.querySelector(".theme");
 
