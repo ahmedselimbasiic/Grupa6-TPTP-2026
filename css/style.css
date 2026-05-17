@@ -1,9 +1,12 @@
+//Stilovi za Google Fonts
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Nunito:wght@400;500&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css");
+
+//Css varijable za boju teksta ii sijenke na karticama ii slovima 
 :root {
   --primarycolor: #036d59;
   --secondarycolor: #50d1ba;
@@ -11,7 +14,7 @@
   --text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   --black-font: #223231;
 }
-
+//Selektor za sve htmll elemente
 * {
   margin: 0;
   padding: 0;
@@ -23,7 +26,7 @@ html {
 body {
   overflow-x: hidden;
 }
-
+/*Header sekcija*/
 .logoimg {
   display: none;
 }
@@ -503,26 +506,7 @@ nav a.active {
     height: 40px;
   }
 }
-.menu-button {
-  width: 120px;
-  height: 40px;
-  background-color: var(--primarycolor);
-  border: none;
-  border-radius: 25px;
-  color: white;
-  text-transform: uppercase;
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  cursor: pointer;
-  transition: 0.2s ease-in-out;
-  margin-top: 10px;
-}
 
-.menu-button:hover {
-  background-color: var(--secondarycolor);
-  color: #15110b;
-}
 .forum {
   text-align: center;
   padding: 30px;
