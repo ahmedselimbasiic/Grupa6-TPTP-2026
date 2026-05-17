@@ -64,7 +64,7 @@ if (themeButton) { // ako postoji dugme za temu, dodaj event listener
       // spremanje light mode u localStorage
       localStorage.setItem("darkmode", "false");
 
-      console.log("Dark mode je ISKLJUČEN");
+      console.log("Dark mode je ISKLJUČEN"); // ispis u konzoli kada je dark mode isključen
     }
   });
 } else {
@@ -85,27 +85,27 @@ var swiper = new Swiper(".slide-content", { // inicijalizacija Swiper instance n
   grabCursor: "true",
 
   pagination: { // konfiguracija paginacije (tačaka)
-    el: ".swiper-pagination",
-    clickable: true,
-    dynamicBullets: true,
+    el: ".swiper-pagination", // element koji će služiti kao kontejner za paginaciju (tačke)
+    clickable: true, // omogućava klikanje na tačke za navigaciju
+    dynamicBullets: true, // omogućava dinamičke tačke koje se mijenjaju ovisno o trenutnom slajdu
   },
 
   navigation: { // konfiguracija navigacije (strelica)
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-next", // element koji će služiti kao dugme za prelazak na sljedeći slajd
+    prevEl: ".swiper-button-prev", // element koji će služiti kao dugme za prelazak na prethodni slajd
   },
 
   breakpoints: { // konfiguracija responzivnosti - broj slajdova se mijenja ovisno o širini ekrana
     0: {
-      slidesPerView: 1,
+      slidesPerView: 1, // na ekranima širine 0px i više, prikazuje se 1 slajd 
     },
 
     520: {
-      slidesPerView: 2,
+      slidesPerView: 2, // na ekranima širine 520px i više, prikazuju se 2 slajda
     },
 
     950: {
-      slidesPerView: 3,
+      slidesPerView: 3, // na ekranima širine 950px i više, prikazuju se 3 slajda
     },
   },
 });
