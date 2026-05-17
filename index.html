@@ -467,5 +467,31 @@
     <script src="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/script.js"></script>
     <script src="javascript/main.js" defer></script>
     <script src="javascript/animations.js" defer></script>
+
+    <script>
+      function pad(n) {
+        return String(Math.floor(n)).padStart(2, "0");
+      }
+      function tick() {
+        var target = new Date("2026-11-01T00:00:00");
+        var diff = target - new Date();
+        if (diff <= 0) {
+          ["tc-d", "tc-h", "tc-m", "tc-s"].forEach(
+            (id) => (document.getElementById(id).textContent = "00")
+          );
+          document.querySelector(".timer-sub").textContent =
+            "Semestar je počeo!";
+          return;
+        }
+        document.getElementById("tc-d").textContent = pad(diff / 864e5);
+        document.getElementById("tc-h").textContent = pad(
+          (diff % 864e5) / 36e5
+        );
+        document.getElementById("tc-m").textContent = pad((diff % 36e5) / 6e4);
+        document.getElementById("tc-s").textContent = pad((diff % 6e4) / 1e3);
+      }
+      tick();
+      setInterval(tick, 1000);
+    </script>
   </body>
 </html>
