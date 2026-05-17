@@ -2782,9 +2782,12 @@ On je generisao ove animacije koje su u suradnji sa javascriptom uspješno imple
   background: transparent;
   font-size: 14px;
   cursor: pointer;
-  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    color 0.2s;
   color: inherit;
-  font-family: inherit;
+  font-family: "Lato", sans-serif;
 }
 
 .pred-filter-btn:hover {
@@ -2808,7 +2811,9 @@ On je generisao ove animacije koje su u suradnji sa javascriptom uspješno imple
 
 /* ── Kartice — animacija filtera ── */
 .pred-card {
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
 }
 
 .pred-card.hidden {
