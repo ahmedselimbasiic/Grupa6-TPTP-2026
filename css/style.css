@@ -1,9 +1,12 @@
+/*Stilovi za Google Fonts*/
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Nunito:wght@400;500&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css");
+
+/*Css varijable za boju teksta ii sijenke na karticama ii slovima*/
 :root {
   --primarycolor: #036d59;
   --secondarycolor: #50d1ba;
@@ -11,7 +14,7 @@
   --text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   --black-font: #223231;
 }
-
+/*Selektor za sve htmll elemente*/
 * {
   margin: 0;
   padding: 0;
@@ -23,7 +26,221 @@ html {
 body {
   overflow-x: hidden;
 }
+/* Dark mode */
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+body.dark-mode .logo-image {
+  display: none;
+}
+body.dark-mode .logo-image-black {
+  display: flex;
+  width: 250px;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+}
 
+body.dark-mode .logo-image-black img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+body.dark-mode header {
+  background-color: #1e1e1e;
+}
+body.dark-mode header .gitrepo {
+  border: none;
+}
+body.dark-mode nav a {
+  color: #ffffff;
+}
+body.dark-mode nav .theme {
+  background-color: white;
+  color: #1e1e1e;
+}
+body.dark-mode nav .theme:hover {
+  background-color: var(--secondarycolor);
+  color: #1e1e1e;
+}
+body.dark-mode nav a:hover,
+body.dark-mode nav a.active {
+  color: var(--secondarycolor);
+}
+
+body.dark-mode .hero-section {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+body.dark-mode .service {
+  background-color: var(--primarycolor);
+  color: #ffffff;
+}
+body.dark-mode .faq h1 {
+  color: white;
+}
+body.dark-mode .forum {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+body.dark-mode .forum h1,
+body.dark-mode .forum span {
+  color: #ffffff;
+}
+
+body.dark-mode .finalsection {
+  background-color: var(--primarycolor);
+  color: #ffffff;
+}
+body.dark-mode footer {
+  background-color: #1e1e1e;
+}
+body.dark-mode footer h1,
+body.dark-mode footer h3,
+body.dark-mode footer a {
+  color: white;
+}
+body.dark-mode .contact .mail p {
+  color: white;
+}
+body.dark-mode .authors .author p {
+  color: white;
+}
+body.dark-mode footer .lower {
+  color: white;
+  border-top: 1px solid white;
+}
+body.dark-mode .finalsection .container .info {
+  background-color: #1e1e1e;
+  color: white;
+}
+body.dark-mode .finalsection .container .info span {
+  color: white;
+}
+body.dark-mode .contact-box {
+  background-color: #1e1e1e;
+}
+body.dark-mode .contact-box h2 {
+  color: var(--primarycolor);
+}
+body.dark-mode .contact-box form label {
+  color: white;
+}
+body.dark-mode .materijali h1 {
+  color: white;
+}
+body.dark-mode .materijali .spann {
+  color: white;
+}
+body.dark-mode .heroo-section {
+  background-color: #1e1e1e;
+}
+body.dark-mode .sv-header h1,
+body.dark-mode .pred-header h2,
+body.dark-mode .res-header h2,
+body.dark-mode .materijali h1 {
+  color: #ffffff;
+}
+body.dark-mode .sv-header p,
+body.dark-mode .pred-header p,
+body.dark-mode .res-header p {
+  color: #cccccc;
+}
+body.dark-mode .sv-group,
+body.dark-mode .pred-card,
+body.dark-mode .res-card {
+  background-color: #2a2a2a;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+body.dark-mode .sv-group-title,
+body.dark-mode .sv-item-title,
+body.dark-mode .pred-card h3,
+body.dark-mode .res-card h3 {
+  color: #ffffff;
+}
+body.dark-mode .sv-group-sub,
+body.dark-mode .sv-item-desc,
+body.dark-mode .pred-placeholder,
+body.dark-mode .res-card-sub {
+  color: #b0b0b0;
+}
+body.dark-mode .faq {
+  background-color: #1e1e1e;
+}
+body.dark-mode .faqforum details {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+body.dark-mode .faqforum summary {
+  color: #ffffff;
+}
+
+body.dark-mode summary .faq-icon {
+  color: var(--secondarycolor);
+}
+@media (max-width: 1200px) {
+  body.dark-mode nav {
+    background-color: #252525;
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: -6px 0 28px rgba(0, 0, 0, 0.5);
+  }
+
+  body.dark-mode nav a.active {
+    border-bottom-color: var(--secondarycolor);
+  }
+
+  body.dark-mode nav > * {
+    align-self: center;
+  }
+
+  body.dark-mode .hamburger .bar {
+    background-color: var(--secondarycolor);
+  }
+
+  body.dark-mode header .gitrepo {
+    background-color: transparent;
+    border: 2px solid var(--secondarycolor);
+    color: var(--secondarycolor);
+  }
+
+  body.dark-mode header .gitrepo:hover {
+    background-color: var(--secondarycolor);
+    color: #1e1e1e;
+  }
+
+  body.dark-mode header:has(nav.active)::before {
+    background: rgba(0, 0, 0, 0.65);
+  }
+
+  body.dark-mode .hamburger.is-active .bar {
+    background-color: var(--secondarycolor);
+  }
+}
+
+@media (max-width: 1050px) {
+  body.dark-mode .logoimg {
+    display: none;
+  }
+  body.dark-mode .logoimg {
+    display: block;
+  }
+  body.dark-mode .logo-image-black {
+    display: none;
+    width: 80px;
+    height: 50px;
+    cursor: pointer;
+  }
+
+  body.dark-mode .logo-image-black img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+/*Header sekcija*/
 .logoimg {
   display: none;
 }
@@ -284,7 +501,8 @@ nav a.active {
 .hero-section {
   margin: 15px;
   height: 70vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
     url(../slike/FET-scaled.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -503,26 +721,7 @@ nav a.active {
     height: 40px;
   }
 }
-.menu-button {
-  width: 120px;
-  height: 40px;
-  background-color: var(--primarycolor);
-  border: none;
-  border-radius: 25px;
-  color: white;
-  text-transform: uppercase;
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  cursor: pointer;
-  transition: 0.2s ease-in-out;
-  margin-top: 10px;
-}
-
-.menu-button:hover {
-  background-color: var(--secondarycolor);
-  color: #15110b;
-}
+/*Forum sekcija*/
 .forum {
   text-align: center;
   padding: 30px;
@@ -581,7 +780,9 @@ nav a.active {
   background: #ffffff;
   border: 1px solid rgba(80, 209, 186, 0.2);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .card:hover {
@@ -698,7 +899,9 @@ nav a.active {
   height: 8px;
   opacity: 1;
   border-radius: 4px;
-  transition: width 0.2s, background 0.2s;
+  transition:
+    width 0.2s,
+    background 0.2s;
 }
 
 .swiper-pagination-bullet-active {
@@ -714,6 +917,7 @@ nav a.active {
     display: none;
   }
 }
+/*Faq sekcija*/
 .faq {
   width: 100%;
   max-width: 1100px;
@@ -836,6 +1040,129 @@ details[open] summary .faq-icon {
     font-size: 40px;
   }
 }
+/*Finalsection*/
+.finalsection {
+  background-color: var(--primarycolor);
+  padding: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+.finalsection .container {
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+.finalsection .container .info,
+.finalsection .container .image {
+  height: 60vh;
+  width: 30vw;
+}
+.finalsection .container .image {
+  padding: 0;
+  overflow: hidden;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.finalsection-map-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+}
+
+.finalsection .container .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+  padding: 30px;
+  font-family: "Lato", sans-serif;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--black-font);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.finalsection .container span {
+  font-family: "Playfair", serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 40px;
+  color: black;
+}
+.finalsection .container .info button {
+  height: 40px;
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--primarycolor);
+  color: white;
+  font-size: 16px;
+  box-shadow: var(--card-shadow);
+  text-shadow: var(--text-shadow);
+  transition: 0.2s ease-in-out;
+}
+.finalsection .container .info button:hover {
+  background-color: rgba(0, 109, 89, 0.9);
+}
+@media (max-width: 1150px) {
+  .finalsection {
+    padding: 60px 40px;
+  }
+
+  .finalsection .container {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+
+  .finalsection .container .info,
+  .finalsection .container .image {
+    width: 100%;
+    height: auto;
+  }
+
+  .finalsection .container .image {
+    height: 300px;
+    order: -1;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .finalsection-map-img {
+    border-radius: 20px 20px 0 0;
+  }
+
+  .finalsection .container .info {
+    border-radius: 0 0 20px 20px;
+    padding: 40px 25px;
+  }
+
+  .finalsection .container h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .finalsection .container span {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .finalsection .container .info button {
+    width: 100%;
+  }
+
+  .finalsection .container .image {
+    height: 200px;
+  }
+}
+/*Footer*/
 footer {
   background-color: white;
   padding: 60px 0 20px 0;
@@ -986,345 +1313,9 @@ footer .lower {
     padding-bottom: 3px;
   }
 }
-.finalsection {
-  background-color: var(--primarycolor);
-  padding: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
-}
-.finalsection .container {
-  max-width: 1000px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  align-items: center;
-  gap: 0px;
-}
-.finalsection .container .info,
-.finalsection .container .image {
-  height: 60vh;
-  width: 30vw;
-}
-.finalsection .container .image {
-  padding: 0;
-  overflow: hidden;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-
-.finalsection-map-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  cursor: pointer;
-}
-
-.finalsection .container .info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 25px;
-  padding: 30px;
-  font-family: "Lato", sans-serif;
-  background-color: rgba(255, 255, 255, 0.9);
-  color: var(--black-font);
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-}
-.finalsection .container span {
-  font-family: "Playfair", serif;
-  font-weight: 400;
-  font-style: italic;
-  font-size: 40px;
-  color: black;
-}
-.finalsection .container .info button {
-  height: 40px;
-  width: 100%;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
-  background-color: var(--primarycolor);
-  color: white;
-  font-size: 16px;
-  box-shadow: var(--card-shadow);
-  text-shadow: var(--text-shadow);
-  transition: 0.2s ease-in-out;
-}
-.finalsection .container .info button:hover {
-  background-color: rgba(0, 109, 89, 0.9);
-}
-@media (max-width: 1150px) {
-  .finalsection {
-    padding: 60px 40px;
-  }
-
-  .finalsection .container {
-    grid-template-columns: 1fr;
-    max-width: 600px;
-  }
-
-  .finalsection .container .info,
-  .finalsection .container .image {
-    width: 100%;
-    height: auto;
-  }
-
-  .finalsection .container .image {
-    height: 300px;
-    order: -1;
-    border-radius: 20px 20px 0 0;
-  }
-
-  .finalsection-map-img {
-    border-radius: 20px 20px 0 0;
-  }
-
-  .finalsection .container .info {
-    border-radius: 0 0 20px 20px;
-    padding: 40px 25px;
-  }
-
-  .finalsection .container h1 {
-    font-size: 32px;
-    text-align: center;
-  }
-
-  .finalsection .container span {
-    font-size: 32px;
-  }
-}
-
-@media (max-width: 480px) {
-  .finalsection .container .info button {
-    width: 100%;
-  }
-
-  .finalsection .container .image {
-    height: 200px;
-  }
-}
-
-/*  Ovdje su dodani stilovi za dark mode */
-body.dark-mode {
-  background-color: #1e1e1e;
-  color: #ffffff;
-}
-body.dark-mode .logo-image {
-  display: none;
-}
-body.dark-mode .logo-image-black {
-  display: flex;
-  width: 250px;
-  height: 70px;
-  align-items: center;
-  justify-content: center;
-}
-
-body.dark-mode .logo-image-black img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  cursor: pointer;
-}
-body.dark-mode header {
-  background-color: #1e1e1e;
-}
-body.dark-mode header .gitrepo {
-  border: none;
-}
-body.dark-mode nav a {
-  color: #ffffff;
-}
-body.dark-mode nav .theme {
-  background-color: white;
-  color: #1e1e1e;
-}
-body.dark-mode nav .theme:hover {
-  background-color: var(--secondarycolor);
-  color: #1e1e1e;
-}
-body.dark-mode nav a:hover,
-body.dark-mode nav a.active {
-  color: var(--secondarycolor);
-}
-
-body.dark-mode .hero-section {
-  background-color: #1e1e1e;
-  color: #ffffff;
-}
-
-body.dark-mode .service {
-  background-color: var(--primarycolor);
-  color: #ffffff;
-}
-body.dark-mode .faq h1 {
-  color: white;
-}
-body.dark-mode .forum {
-  background-color: #1e1e1e;
-  color: #ffffff;
-}
-
-body.dark-mode .forum h1,
-body.dark-mode .forum span {
-  color: #ffffff;
-}
-
-body.dark-mode .finalsection {
-  background-color: var(--primarycolor);
-  color: #ffffff;
-}
-body.dark-mode footer {
-  background-color: #1e1e1e;
-}
-body.dark-mode footer h1,
-body.dark-mode footer h3,
-body.dark-mode footer a {
-  color: white;
-}
-body.dark-mode .contact .mail p {
-  color: white;
-}
-body.dark-mode .authors .author p {
-  color: white;
-}
-body.dark-mode footer .lower {
-  color: white;
-  border-top: 1px solid white;
-}
-body.dark-mode .finalsection .container .info {
-  background-color: #1e1e1e;
-  color: white;
-}
-body.dark-mode .finalsection .container .info span {
-  color: white;
-}
-body.dark-mode .contact-box {
-  background-color: #1e1e1e;
-}
-body.dark-mode .contact-box h2 {
-  color: var(--primarycolor);
-}
-body.dark-mode .contact-box form label {
-  color: white;
-}
-body.dark-mode .materijali h1 {
-  color: white;
-}
-body.dark-mode .materijali .spann {
-  color: white;
-}
-body.dark-mode .heroo-section {
-  background-color: #1e1e1e;
-}
-body.dark-mode .sv-header h1,
-body.dark-mode .pred-header h2,
-body.dark-mode .res-header h2,
-body.dark-mode .materijali h1 {
-  color: #ffffff;
-}
-body.dark-mode .sv-header p,
-body.dark-mode .pred-header p,
-body.dark-mode .res-header p {
-  color: #cccccc;
-}
-body.dark-mode .sv-group,
-body.dark-mode .pred-card,
-body.dark-mode .res-card {
-  background-color: #2a2a2a;
-  border-color: rgba(255, 255, 255, 0.12);
-}
-body.dark-mode .sv-group-title,
-body.dark-mode .sv-item-title,
-body.dark-mode .pred-card h3,
-body.dark-mode .res-card h3 {
-  color: #ffffff;
-}
-body.dark-mode .sv-group-sub,
-body.dark-mode .sv-item-desc,
-body.dark-mode .pred-placeholder,
-body.dark-mode .res-card-sub {
-  color: #b0b0b0;
-}
-body.dark-mode .faq {
-  background-color: #1e1e1e;
-}
-body.dark-mode .faqforum details {
-  background-color: #2a2a2a;
-  color: #ffffff;
-}
-body.dark-mode .faqforum summary {
-  color: #ffffff;
-}
-
-body.dark-mode summary .faq-icon {
-  color: var(--secondarycolor);
-}
-
-/* Mobile nav + dark mode */
-@media (max-width: 1200px) {
-  body.dark-mode nav {
-    background-color: #252525;
-    border-left: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: -6px 0 28px rgba(0, 0, 0, 0.5);
-  }
-
-  body.dark-mode nav a.active {
-    border-bottom-color: var(--secondarycolor);
-  }
-
-  body.dark-mode nav > * {
-    align-self: center;
-  }
-
-  body.dark-mode .hamburger .bar {
-    background-color: var(--secondarycolor);
-  }
-
-  body.dark-mode header .gitrepo {
-    background-color: transparent;
-    border: 2px solid var(--secondarycolor);
-    color: var(--secondarycolor);
-  }
-
-  body.dark-mode header .gitrepo:hover {
-    background-color: var(--secondarycolor);
-    color: #1e1e1e;
-  }
-
-  body.dark-mode header:has(nav.active)::before {
-    background: rgba(0, 0, 0, 0.65);
-  }
-
-  body.dark-mode .hamburger.is-active .bar {
-    background-color: var(--secondarycolor);
-  }
-}
-
-@media (max-width: 1050px) {
-  body.dark-mode .logoimg {
-    display: none;
-  }
-  body.dark-mode .logoimg {
-    display: block;
-  }
-  body.dark-mode .logo-image-black {
-    display: none;
-    width: 80px;
-    height: 50px;
-    cursor: pointer;
-  }
-
-  body.dark-mode .logo-image-black img {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
+/*KONTAKT*/
+/*Kontakt forma je radjena pomoću Youtube tutorijala, pa je dodatno
+poboljšana pomoću Chatgpt-a*/
 .contact-container {
   width: 100%;
   min-height: 100vh;
@@ -1471,10 +1462,13 @@ textarea.field {
 .btn:hover {
   background-color: #084c3b;
 }
+/*MATERIJALI I SAVJETI*/
+/*Hero sekcija*/
 .hero-section-materials {
   margin: 15px;
   height: 70vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
     url(../slike/materijali.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -1535,7 +1529,10 @@ textarea.field {
   }
 }
 
-/* === MATERIJALI SECTION === */
+/*Materijali sekcija*/
+/*Jedan dio koda je rađen samostalno, pa zbog nedostatka ideje i 
+puno praznog prostora unaprijeđen je pomoću claude ai koji nam je 
+pomogao oko modernijeg dizajna*/
 .materijali {
   padding: 4rem 2rem;
   max-width: 1100px;
@@ -1562,7 +1559,7 @@ textarea.field {
   display: inline-block;
   padding: 0 10px;
 }
-.materijali .spann::after{
+.materijali .spann::after {
   content: "";
   position: absolute;
   bottom: 5px;
@@ -1574,16 +1571,12 @@ textarea.field {
   border-radius: 30% 70% 70% 30% / 50% 30% 70% 50%;
   transform: scale(1.1);
   opacity: 0.8;
-} 
-
-/* === GRID === */
+}
 .materijali .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
-
-/* === KARTICE === */
 .materijali .card {
   background: #ffffff;
   border: 0.5px solid #e0e0e0;
@@ -1899,6 +1892,10 @@ textarea.field {
     width: 100%;
   }
 }
+/*Savjeti sekcija*/
+/*U sekciji za savjete koristili smo pomoć od strane Claude.ai kako bi nam dao ideju
+kako bi ovu stranicu mogli dizajnirati.Preporucio nam je moderan, savremen dizajn kako
+bi ova stranica trebala izgledati i na osnovu njegovih ideja smo implementirali izgled ove, i sledecih sekcija*/
 .sv-section {
   padding: 4rem 2rem;
   max-width: 900px;
@@ -2224,10 +2221,9 @@ tr:hover td {
 .d3::before {
   background: #f09595;
 }
-
-/* ================================
-   SEKCIJA 3 — BIJELA / KARTICE
-================================ */
+/*Također za ovu sekciju važi isto kao za prethodnu.Claude.ai nam je pomogao, predložio i 
+demonstrirao moderan izgled i dizajn ove sekcije i na osnovu njegovih prijedloga implementirali
+smo ovu sekciju*/
 .pred-section {
   padding: 4rem 2rem;
   max-width: 960px;
@@ -2349,9 +2345,6 @@ tr:hover td {
   color: #999;
 }
 
-/* ================================
-   SEKCIJA 4 — ZELENA / RESURSI
-================================ */
 .res-section {
   background: var(--primarycolor);
   width: 100%;
@@ -2483,10 +2476,6 @@ tr:hover td {
   flex-shrink: 0;
   margin-top: 6px;
 }
-
-/* ================================
-   RESPONZIVNOST
-================================ */
 @media (max-width: 768px) {
   .sv-section,
   .pred-section {
@@ -2649,7 +2638,8 @@ tr:hover td {
 .heroo-section {
   margin: 15px;
   height: 70vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
     url(../slike/materijali.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -2709,11 +2699,12 @@ tr:hover td {
     width: 90vw;
   }
 }
-
-/* Scroll & appear animations */
+/*Ove animacije za onscroll i onappear su radjene u programu Cursor koji u sebi posjeduje ugrađen AI alat.
+On je generisao ove animacije koje su u suradnji sa javascriptom uspješno implementirane na našu stranicu.*/
 [data-aos] {
   opacity: 0;
-  transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+  transition:
+    opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
     transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
   transition-delay: var(--aos-delay, 0ms);
   will-change: opacity, transform;

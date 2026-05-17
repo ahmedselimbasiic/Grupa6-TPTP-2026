@@ -58,15 +58,15 @@
 
   function initAppear() { // Inicijaliziraj animacije koje se pojavljuju odmah po učitavanju stranice
     APPEAR.forEach(({ selector, type, delay, skip }) => {
-      if (skip && skip()) return;
+      if (skip && skip()) return; // Ako postoji funkcija skip i ona vraća true, preskoči ovu animaciju (korisno za različite uređaje)
       document.querySelectorAll(selector).forEach((el) => {
-        applyAos(el, type, delay);
-        el.setAttribute("data-aos-once", "appear");
+        applyAos(el, type, delay); // Postavi AOS atribute na element
+        el.setAttribute("data-aos-once", "appear"); // Dodaj atribut koji označava da se animacija treba pokrenuti odmah po učitavanju stranice
       });
     });
 
     requestAnimationFrame(() => { // Pokreni animacije nakon što su svi elementi postavljeni
-      requestAnimationFrame(() => {
+      requestAnimationFrame(() => { // Dodatni requestAnimationFrame kako bi se osiguralo da se animacije pokrenu nakon što su svi elementi postavljeni
         document.querySelectorAll('[data-aos-once="appear"]').forEach((el) => {
           el.classList.add("aos-animate");
         });

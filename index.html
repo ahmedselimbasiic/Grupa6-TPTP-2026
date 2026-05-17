@@ -1,18 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="bs">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="slike/icon.png" />
+    <!-- Stilovi za ikonice -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <!-- Stilovi za slider -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css"
     />
+
     <title>FETHub</title>
   </head>
   <body>
@@ -33,7 +36,10 @@
         <a href="index.html" class="active">Početna</a>
         <a href="sadrzaj.html">Savjeti i materijali</a>
         <a href="kontakt.html">Kontakt</a>
+        <!-- Dugme za promjenu teme (light/dark mode) -->
         <button class="theme"><i class="fa-solid fa-moon"></i></button>
+        <!-- fa-solid = stil ikonice -->
+        <!-- fa-moon = ikonica mjeseca -->
         <a href="https://github.com/ahmedselimbasiic/Grupa6-TPTP-2026"
           ><button class="gitrepo">Git</button></a
         >
@@ -88,9 +94,11 @@
           </div>
         </div>
       </div>
+      <!-- Timer countdown dodan i organizovan pomoću AI-a.-->
       <div class="timer-card">
         <div class="icon-timer">
           <i class="ti ti-clock"></i>
+          <!-- ti ti-clock = ikonica sata -->
         </div>
         <div class="timer-info">
           <h3>Početak semestra</h3>
@@ -100,14 +108,17 @@
               <span class="timer-num" id="tc-d">--</span
               ><span class="timer-label">Dana</span>
             </div>
+            <!-- Polje za sate -->
             <div class="timer-box">
               <span class="timer-num" id="tc-h">--</span
               ><span class="timer-label">Sati</span>
             </div>
+            <!-- Polje za minute -->
             <div class="timer-box">
               <span class="timer-num" id="tc-m">--</span
               ><span class="timer-label">Min</span>
             </div>
+            <!-- Polje za sekunde -->
             <div class="timer-box">
               <span class="timer-num" id="tc-s">--</span
               ><span class="timer-label">Sek</span>
@@ -119,12 +130,17 @@
 
     <div class="forum">
       <h1>Iskustva naših <br /><span>studenata</span></h1>
-
+      <!-- Swiper slider dodan pomoću AI-a. -->
       <div class="slide-container swiper">
         <div class="slide-content">
+          <!-- Razumijem da je ovo sadržaj slidera -->
           <div class="card-wrapper swiper-wrapper">
+            <!-- card-wrapper je klasa za stilizovanje, 
+            swiper-wrapper obavezna klasa za funkcionalnosti -->
             <div class="card swiper-slide">
+              <!-- Jedan slide -->
               <div class="image-content">
+                <!-- dio kartice sa slikom -->
                 <span class="overlay"></span>
                 <div class="card-image">
                   <img
@@ -135,6 +151,7 @@
                 </div>
               </div>
               <div class="card-content">
+                <!-- Dio kartice sa sadržajem -->
                 <h2 class="name">Adnan Hadžić</h2>
                 <p class="description">
                   "Iskreno, kada sam prvi put ušao u amfiteatar i čuo prvo
@@ -234,8 +251,11 @@
             </div>
           </div>
         </div>
+        <!-- Dugme za prelazak na sljedeći slide, swiper-button-next obavezna klasa, swiper-navBtn klasa za css -->
         <div class="swiper-button-next swiper-navBtn"></div>
+        <!-- Dugme za prelazak na prethodni slide, swiper-button-prev obavezna klasa, swiper-navBtn klasa za css -->
         <div class="swiper-button-prev swiper-navBtn"></div>
+        <!-- Tačkice slidera -->
         <div class="swiper-pagination"></div>
       </div>
     </div>
@@ -249,6 +269,11 @@
               class="fa-solid fa-chevron-down faq-icon"
               aria-hidden="true"
             ></i>
+            <!-- Klase dodane pomoću AI-a -->
+            <!-- fa-solid = Font Awesome stil ikonice -->
+            <!-- fa-chevron-down = ikonica strelice prema dole -->
+            <!-- faq-icon =  CSS klasa za stil ikonice -->
+            <!-- aria-hidden="true" = screen reader ignoriše ikonicu -->
           </summary>
           <div class="content">
             <p>
@@ -347,7 +372,6 @@
           <a href="sadrzaj.html"><button>Olakšaj sebi faks</button></a>
         </div>
         <div class="image">
-      
           <img
             src="slike/young-students-watching-laptop.jpg"
             alt="Studenti uče uz laptop — kliknite na područje"
@@ -356,7 +380,9 @@
             usemap="#fethub-map"
             class="finalsection-map-img"
           />
+          <!-- Mapa klikabilnih područja dodana uz AI -->
           <map name="fethub-map">
+            <!-- prvo klikabilno područje -->
             <area
               shape="rect"
               coords="0,0,265,500"
@@ -364,6 +390,13 @@
               alt="Savjeti za učenje"
               title="Savjeti"
             />
+            <!-- shape="rect" = pravougaono područje -->
+            <!-- coords = koordinate područja na slici -->
+            <!-- href = stranica/sekcija gdje vodi klik -->
+            <!-- alt = opis područja -->
+            <!-- title = tekst koji se pojavi kad pređeš mišem -->
+            <!---->
+            <!-- Drugo klikabilno područje-->
             <area
               shape="rect"
               coords="266,0,533,500"
@@ -371,6 +404,7 @@
               alt="Materijali za faks"
               title="Materijali"
             />
+            <!-- Trece klikabilno područje -->
             <area
               shape="rect"
               coords="534,0,800,500"
@@ -389,6 +423,8 @@
           <h3>Autori</h3>
           <div class="author">
             <div class="icon"><i class="fa-solid fa-user-gear"></i></div>
+            <!-- fa-solid = Font Awesome stil ikonice -->
+            <!-- fa-user-gear = ikonica korisnika -->
             <p>Aida Halilčević</p>
           </div>
           <div class="author">
@@ -404,6 +440,8 @@
           <h3>Kontakt</h3>
           <div class="mail">
             <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+            <!-- fa-solid = Font Awesome stil -->
+            <!-- fa-envelope = email/mail ikonica -->
             <p>aida.halilcevic@fet.ba</p>
           </div>
           <div class="mail">
@@ -424,7 +462,7 @@
       </div>
       <div class="lower">&copy;FETHub 2026</div>
     </footer>
-
+    <!-- Skripte za JS -->
     <script src="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/script.js"></script> 
     <script src="javascript/main.js" defer></script>
