@@ -240,6 +240,12 @@ body.dark-mode summary .faq-icon {
     height: auto;
   }
 }
+body.dark-mode .pred-section .sem-title {
+  color: white;
+}
+body.dark-mode .sv-section .highlight {
+  color: var(--secondarycolor);
+}
 /*Header sekcija*/
 .logoimg {
   display: none;
@@ -2756,4 +2762,70 @@ On je generisao ove animacije koje su u suradnji sa javascriptom uspješno imple
     transform: none !important;
     transition: none !important;
   }
+}
+
+/* ── Filter dugmad ── */
+.pred-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 0 auto 2.5rem;
+  max-width: 900px;
+  padding: 0 1rem;
+}
+
+.pred-filter-btn {
+  padding: 8px 20px;
+  border-radius: 999px;
+  border: 1.5px solid #ccc;
+  background: transparent;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  color: inherit;
+  font-family: inherit;
+}
+
+.pred-filter-btn:hover {
+  border-color: #888;
+}
+
+.pred-filter-btn.active {
+  background: #1a1a2e;
+  border-color: #1a1a2e;
+  color: #fff;
+}
+
+/* Dark mode podrška */
+@media (prefers-color-scheme: dark) {
+  .pred-filter-btn.active {
+    background: #fff;
+    border-color: #fff;
+    color: #1a1a2e;
+  }
+}
+
+/* ── Kartice — animacija filtera ── */
+.pred-card {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.pred-card.hidden {
+  display: none;
+}
+
+/* ── Naslov semestra — sakrivanje kad nema vidljivih kartica ── */
+.sem-title.sem-hidden {
+  display: none;
+}
+
+.pred-grid.sem-hidden {
+  display: none;
+}
+/* ── Spriječi razvlačenje kartica ── */
+.pred-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  justify-content: start;
 }
